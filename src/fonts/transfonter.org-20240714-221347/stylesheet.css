@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'IowanOldSt Blk BT';
+    src: url('IowanOldStyleBT-Black.woff2') format('woff2'),
+        url('IowanOldStyleBT-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IowanOldSt BT';
+    src: url('IowanOldStyleBT-Roman.woff2') format('woff2'),
+        url('IowanOldStyleBT-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
