@@ -35,6 +35,17 @@ main{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  animation: scaleBackground 10s ease-in-out forwards;
+  @keyframes scaleBackground {
+    0% {
+      background-size: 100% 100%; // Начальный масштаб фона
+    }
+    100% {
+      background-size: 120% 120%; // Конечный масштаб фона
+    }
+  }
   .main-wrapper{
     background: rgba(33, 33, 33, 0.4);
   }
@@ -235,10 +246,10 @@ footer{
           opacity: 70%;
           color: #a79da1;
           transform: 0.8s;
+          padding-left: 5px;
           &:hover{
             opacity: 100%;
           }
-          padding-left: 5px;
         }
       }
     }
