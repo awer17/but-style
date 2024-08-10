@@ -191,36 +191,108 @@
     <!-- foter -->
     <footer>
       <div class="wrap center">
-        <div class="center_context">
-          <div class="wrap_context">
-            <div class="wrap-contact">
-              <img src="/src/image/but-style.svg" alt="logo_but-style">
-              <div class="_context">
-                <p class="title">
-                  Contact us
-                </p>
-                <p class="name-company">ESMAN-STYLE LLC</p>
-                <p class="address">24956 E Calhoun pl #A <br>
-                  Aurora, CO,  80016</p>
-                  <a href="tel:+17205195589" class="tel">720.519.55.89</a>
-                  <a href="mailto:info@but-style.com" class="mail">info@but-style.com</a>
+        <img src="src/image/svg/but-style-logo-footer.svg" alt="but-style-logo" class="logo-footer">
+        <div class="nav-footer">
+          <ul>
+            <li><a href="#about"></a>About Us</li>
+            <li><a href="#services"></a>Services</li>
+            <li><a href="#Reviews"></a>Reviews</li>
+            <li><a href="#"></a>Request an Estimat</li>
+            <li><a href="#"></a>Send a message</li>
+          </ul>
+        </div>
+        <div class="inform">
+          <div class="form">
+            <p class="title">
+              Submit S Message
+            </p>
+            <p class="context">
+              In the near future, our manager will contact you.
+            </p>
+            <form id="contactForm">
+              <div class="name-form">
+                <label for="name">Name (required):</label><br>
+                <input type="text" id="name" name="name" required><br><br>
               </div>
+              <div class=" surname">
+                <label for="surname">Surname:</label><br>
+                <input type="text" id="surname" name="surname"><br><br>
+              </div>
+              <div class="phone">
+                <label for="phone">Phone Number (required):</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+              </div>
+              <div class="time">
+                <label for="time">Preferred Time:</label><br>
+                <select id="time" name="time">
+                  <option value="anytime" selected>Anytime</option>
+                  <option value="9am">9 AM</option>
+                  <option value="10am">10 AM</option>
+                  <option value="11am">11 AM</option>
+                  <option value="12pm">12 PM</option>
+                  <option value="1pm">1 PM</option>
+                  <option value="2pm">2 PM</option>
+                  <option value="3pm">3 PM</option>
+                  <option value="4pm">4 PM</option>
+                  <option value="5pm">5 PM</option>
+                  <option value="6pm">6 PM</option>
+                  <option value="7pm">7 PM</option>
+                </select><br><br>
+              </div>
+              <div class="email">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="contacts">
+            <div class="inform-contacts">
+              <p class="title">
+                Contact us
+              </p>
+              <p class="address">
+                24956 E Calhoun pl #A <br>
+                Aurora, CO,  80016
+              </p>
+              <a href="tel:+17205195589" class="phone">tel: (720)519-5589 </a>
+              <a href="mailto:info@but-style.com:" class="emeil">info@but-style.com</a>
+            </div>
+            <div class="social-media">
+              <a href="#"><img src="src/image/svg/facebook.svg.svg" alt="facebook_logo"></a>
+              <a href="#"><img src="src/image/svg/instagram.svg.svg" alt="instagram_logo"></a>
+              <a href="#"><img src="src/image/svg/google-reviews.svg" alt="google-reviews_logo"></a>
             </div>
           </div>
-          <div class="wrap-copyright">
-            <div class="line">
-            </div>
-            <div class="__wrapper">
-              <div class="copyright">
-                <span>&copy; 2024</span>
-                <a href="#">but-style.com</a>
-              </div>
-              <div class="developer">SEgroup</div>
-            </div>
-          </div>
-  
+        </div>
+        <div class="site-info">
+          <span>&copy;2024,</span>
+          <a href="#">but-style.com</a>
+          <a href="#">SEgroup</a>
         </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращает отправку формы
+        // Получаем значения полей формы
+        const name = document.getElementById('name').value;
+        const surname = document.getElementById('surname').value || "Not provided";
+        const phone = document.getElementById('phone').value;
+        const time = document.getElementById('time').value;
+        const email = document.getElementById('email').value || "Not provided";
+        // Создаем массив с данными
+        const formData = {
+          name: name,
+          surname: surname,
+          phone: phone,
+          time: time,
+          email: email
+        };
+        console.log(formData); // Выводим массив в консоль
+        // Вы можете сделать что-то с этим массивом, например, отправить его на сервер или показать пользователю
+      });
+    </script>
   </body>
 </html>
