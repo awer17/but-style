@@ -1,0 +1,25 @@
+@import '/src/fonts/transfonter.org-20240714-221347/stylesheet.css';
+@import '/src/fonts/transfonter.org-20240715-004456/stylesheet.css';
+@import '/node_modules/normalize.css/normalize.css';
+.center {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header .container-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav {
+  display: none;
+}
+
+footer {
+  display: none;
+}/*# sourceMappingURL=common-styles.css.map */
