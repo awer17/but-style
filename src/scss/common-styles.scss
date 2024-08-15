@@ -1,6 +1,7 @@
 @import '/src/fonts/transfonter.org-20240714-221347/stylesheet.css';
 @import '/src/fonts/transfonter.org-20240715-004456/stylesheet.css';
-@import '/node_modules/normalize.css/normalize.css';
+// @import '/node_modules/normalize.css/normalize.css';
+
 
 @mixin onlylange($w) {
   @media only screen and (max-width: $w)
@@ -9,25 +10,201 @@
   }
 }
 
+
 .center{
   max-width: 1290px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 body{
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 // header
 header{
+  position: relative;
   .container-header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    position: relative;
+
+    // burger menu
+    .burger-menu {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 4;
+      &:hover{
+        span{
+          filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+          background: #212121;
+          &::before,
+          &::after{
+            background: #212121;
+          }
+        }
+      }
+      span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #4A4A49;
+        position: relative;
+        z-index: 1;
+        transition: all 0.8s ease;
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: #4A4A49;
+          position: absolute;
+          transition: all 0.8s ease;
+        }
+        &::before {
+          top: -9px;
+        }
+        &::after {
+          top: 9px;
+        }
+      }
+    }
+    .active_burger{
+      span {
+        background: transparent;
+        &:hover{
+          background: transparent;
+        }
+      }
+      span::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      span::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      &:hover{
+        span{
+          &::before,
+          &::after{
+            background: #A79DA1;
+          }
+        }
+      }
+    }
+
+    button{
+      padding: 12px 40px 12px 72px;
+      background: none;
+      border: solid 1px #4a4949;
+      position: relative;
+      font-family: "Avenir Next";
+      font-size: 24px;
+      color: #4A4A49;
+      position: relative;
+      z-index: 4;
+      cursor: pointer;
+      &:hover{
+        border-color: #A79DA1;
+      }
+      svg{
+        position: absolute;
+        left: 40px;
+        top: calc( 50% - 17px / 2)
+      }
+    }
+    a.logo-header{
+      position: absolute;
+      z-index: 4;
+      top: -1px;
+      left: calc( 50% - 156px / 2);
+    }
+
   }
 }
 .nav{
-  display: none;
+  position: absolute;
+  // display: none;
+  width: 100%;
+  height: calc(100vh + 38px);
+  background: #212121;
+  top: -900px;
+  z-index: 3;
+  transition: 0.8s;
+  nav{
+    margin-top: 120px;
+    ul{
+      padding: 0;
+    }
+    li{
+      list-style: none;
+      padding-bottom: 20px;
+      a{
+        text-decoration: none;
+        font-family: "Inter";
+        font-size: 20px;
+        color: #A79DA1;
+        &:hover{
+          color: #ffff;
+        }
+      }
+    }
+  }
+  .contact-info{
+    margin-top: calc(200px);
+    .contact_burger{
+      margin-bottom: 20px;
+      a{
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        font-family: "Inter";
+        font-size: 18px;
+        color: #A79DA1;
+        margin-bottom:  10px;
+        &:hover{
+          color: #ffff;
+        }
+      }
+    }
+    div.social_network{
+      width: 210px;
+      display: flex;
+      margin-left: auto;
+      justify-content: space-between;
+      .box_linc{
+        border: solid 1px #373737;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          border-color: #ffff;
+        }
+        a{
+        }
+      }
+    }
+  }
 }
+.active_nav{
+  top: -38px;
+}
+
+
 
 footer{
   display: none;
