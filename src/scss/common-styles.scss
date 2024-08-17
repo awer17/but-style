@@ -26,13 +26,17 @@ body{
 header{
   position: relative;
   .container-header{
+    width: 100%;
     display: flex;
+    right: calc(50% - 1290px / 2);
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 32px;
     margin-bottom: 32px;
-    position: relative;
-
+    position: fixed;
+    z-index: 4;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #4a4949 ;
     // burger menu
     .burger-menu {
       width: 24px;
@@ -43,7 +47,7 @@ header{
       justify-content: center;
       cursor: pointer;
       position: relative;
-      z-index: 4;
+      z-index: 1;
       &:hover{
         span{
           filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
@@ -111,7 +115,7 @@ header{
       border: solid 1px #4a4949;
       position: relative;
       font-family: "Avenir Next";
-      font-size: 24px;
+      font-size: 18px;
       color: #4A4A49;
       position: relative;
       z-index: 4;
@@ -134,17 +138,19 @@ header{
 
   }
 }
+
+
 .nav{
   position: absolute;
   // display: none;
   width: 100%;
-  height: calc(100vh + 38px);
+  height: calc(100vh);
   background: #212121;
-  top: -900px;
+  top: -100vh;
   z-index: 3;
   transition: 0.8s;
   nav{
-    margin-top: 120px;
+    margin-top: 180px;
     ul{
       padding: 0;
     }
@@ -163,7 +169,7 @@ header{
     }
   }
   .contact-info{
-    margin-top: calc(200px);
+    margin-top: calc(100vh - 630px);
     .contact_burger{
       margin-bottom: 20px;
       a{
@@ -201,7 +207,7 @@ header{
   }
 }
 .active_nav{
-  top: -38px;
+  top: 0px;
 }
 
 
