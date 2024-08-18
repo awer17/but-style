@@ -34,6 +34,9 @@ h1{
 body{
   margin: 0 auto;
   box-sizing: border-box;
+  &.active_burger{
+    overflow: hidden;
+  }
 }
 
 // header
@@ -120,9 +123,10 @@ header{
     z-index: 3;
   }
   .container-header{
-    width: 100%;
+    width: 90vw;
     display: flex;
-    right: calc(50% - 1290px / 2);
+    margin: 0 auto;
+    right: calc(50% - 90vw / 2);
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 32px;
@@ -338,6 +342,9 @@ header{
 // main
 section.hero{
   background-image: url(../image/background_helo.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: scaleBackground 20s ease-in-out forwards;
   height: 388px;
   position: fixed;
   width: 100%;
@@ -366,4 +373,14 @@ footer{
   align-items: center;
 
   display: none;
+}
+@keyframes scaleBackground {
+  0% {
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+  100% {
+    background-size: 120% 120%; // Увеличение масштаба фона
+    background-position: center center;
+  }
 }
