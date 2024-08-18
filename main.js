@@ -1,5 +1,6 @@
 import "normalize.css";
 import './src/scss/index.scss';
+import './src/js/animacia_about'
 
 const burgerMenu = document.querySelector('.burger-menu');
 const navMenu = document.querySelector(".nav");
@@ -21,3 +22,16 @@ window.addEventListener('scroll', () => {
       header.classList.remove('start_scroll');
   }
 });
+
+function liClick(event) {
+  if (event.target.classList.contains('click-li')) {
+    // Здесь можно написать код, который должен выполняться при нажатии
+    burgerMenu.classList.toggle('active_burger');
+    navMenu.classList.toggle('active_nav')
+    containerHeader.classList.toggle('active')
+    body.classList.toggle('active_burger')
+    console.log('Item clicked:', event.target.textContent);
+  }
+}
+
+document.addEventListener('click', liClick);

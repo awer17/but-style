@@ -421,6 +421,7 @@ section.hero{
   background-image: url(../image/background_helo.jpg);
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: auto 120%; // Устанавливаем начальный размер фона
   animation: scaleBackground 10s ease-in-out forwards; // Анимация масштаба
   background-size: cover;
   height: 388px;
@@ -442,16 +443,16 @@ section.hero{
 }
 
 
-@keyframes scaleBackground {
-  0% {
-    background-size: auto 120%;
-    background-position: center center;
-  }
-  100% {
-    background-size: auto 140% ;
-    background-position: center center;
-  }
-}
+// @keyframes scaleBackground {
+//   0% {
+//     background-size: auto 120%;
+//     background-position: center center;
+//   }
+//   100% {
+//     background-size: auto 130% ;
+//     background-position: center center;
+//   }
+// }
 
 // footer
 footer{
