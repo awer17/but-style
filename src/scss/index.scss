@@ -1,6 +1,68 @@
 @import '/src/scss/common-styles.scss';
 
 // main
-.about, .services, .reviews{
+  .services, .reviews{
   display: none;
+}
+
+// about
+.about{
+  background: #ffff;
+  padding-top: 128px;
+  padding-bottom: 270px;
+  @include onlylange(771px){
+    padding-bottom: 140px;
+  }
+  .wrap_content{
+  max-width: 617px;
+  }
+  .flec-container{
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 20px;
+    @include onlylange(771px){
+      flex-direction: column;
+      align-items: center;
+      padding-top:100px;
+    }
+    .item{
+      width: 100%;
+      @include onlylange(1093px){
+        &:nth-child(2) .title{
+          width: 100px;
+        }
+        &:nth-child(1) .title{
+          width: 150px;
+        }
+      }
+      @include onlylange(771px){
+        max-width: 624px;
+      }
+      img{
+        width: 100%;
+        height: 339px;
+        object-fit: cover;
+      }
+      .title{
+        font-family:'Inter';
+        font-size: 21px;
+        text-align: left;
+        @include onlylange(1093px){
+          font-size: 20px;
+          width: 80%;}
+        @include onlylange(640px){
+          font-size: 19px;
+        }
+        @include onlylange(465px){
+          font-size: 17px;
+        }
+      }
+      .description{
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }

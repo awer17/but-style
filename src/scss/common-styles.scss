@@ -33,6 +33,49 @@ h1{
   }
 }
 
+h2{
+  color: #A79DA1;
+  font-family: 'IowanOldSt BT';
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 48px;
+  span{
+    color: #1E1E1E;
+  }
+  @include onlylange(900px){
+    font-size: 35px;
+  }
+  @include onlylange(640px){
+    font-size: 28px;
+  }
+  @include onlylange(465px){
+    font-size: 23px;
+  }
+
+
+
+}
+
+p{
+  font-family: 'Amiri';
+  color: #4A4A49;
+  font-size: 24px;
+  text-align: justify;
+  @include onlylange(900px){
+    font-size: 20px;
+  }
+  @include onlylange(640px){
+    font-size: 18px;
+  }
+  @include onlylange(465px){
+    font-size: 15px;
+  }
+
+
+
+
+}
+
 
 .center{
   max-width: 1260px;
