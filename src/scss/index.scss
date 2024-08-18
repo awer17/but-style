@@ -1,4 +1,6 @@
 @import '/src/scss/common-styles.scss';
 
 // main
-
+.about, .services, .reviews{
+  display: none;
+}
