@@ -9,7 +9,7 @@
       @content;
   }
 }
-$fb: 60px;
+
 $color_light: #D9D9D9;
 $color_dark: #A79DA1;
 
@@ -20,8 +20,17 @@ h1{
   font-weight: normal;
   font-style: normal;
   text-align: center;
-  font-size: $fb;
-  letter-spacing: 3px
+  font-size: 60px;
+  letter-spacing: 3px;
+  @include onlylange(900px){
+    font-size: 40px;
+  }
+  @include onlylange(640px){
+    font-size: 30px;
+  }
+  @include onlylange(465px){
+    font-size: 25px;
+  }
 }
 
 
@@ -30,6 +39,10 @@ h1{
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+  @include onlylange(840px){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 body{
   margin: 0 auto;
@@ -344,7 +357,8 @@ section.hero{
   background-image: url(../image/background_helo.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  animation: scaleBackground 20s ease-in-out forwards;
+  animation: scaleBackground 10s ease-in-out forwards; // Анимация масштаба
+  background-size: cover;
   height: 388px;
   position: fixed;
   width: 100%;
@@ -376,11 +390,11 @@ footer{
 }
 @keyframes scaleBackground {
   0% {
-    background-size: 100% 100%;
+    background-size: auto 120%;
     background-position: center center;
   }
   100% {
-    background-size: 120% 120%; // Увеличение масштаба фона
+    background-size: auto 140% ;
     background-position: center center;
   }
 }
