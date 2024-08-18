@@ -101,7 +101,6 @@ header.start_scroll{
             fill:#747473;
           }
         }
-  
       }
     }
   }
@@ -230,8 +229,9 @@ header{
       z-index: 4;
       cursor: pointer;
       top: -10px;
+      transition: background-color 0.5s ease;
       &:hover{
-        filter:drop-shadow(0px 2px 2px rgba(0,0,0,0.9));
+        background: rgba(167, 157, 161, 0.2);
       }
       svg{
         position: absolute;
@@ -245,6 +245,11 @@ header{
       top: -10px;
       left: calc( 50% - 156px / 2);
       transition:  0.8s ;
+      svg{
+        path{
+          transition: background-color 0.8s ease;
+        }
+      }
       &:hover{
         filter:drop-shadow(0px 3px 3px rgba(0,0,0,0.9));
       }
