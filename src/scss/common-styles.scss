@@ -1,7 +1,17 @@
 @import '/src/fonts/transfonter.org-20240714-221347/stylesheet.css';
 @import '/src/fonts/transfonter.org-20240715-004456/stylesheet.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 // @import '/node_modules/normalize.css/normalize.css';
 
+body{
+  margin: 0 auto;
+  box-sizing: border-box;
+  &.active_burger{
+    overflow: hidden;
+  }
+}
 
 @mixin onlylange($w) {
   @media only screen and (max-width: $w)
@@ -93,13 +103,7 @@ p{
     padding-right: 37px;
   }
 }
-body{
-  margin: 0 auto;
-  box-sizing: border-box;
-  &.active_burger{
-    overflow: hidden;
-  }
-}
+
 
 // header
 header.start_scroll{
@@ -463,6 +467,4 @@ footer{
   z-index: 1;
   display: flex;
   align-items: center;
-
-  // display: none;
 }

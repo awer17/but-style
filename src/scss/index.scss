@@ -1,7 +1,7 @@
 @import '/src/scss/common-styles.scss';
 
 // main
-  .services, .reviews{
+  .reviews{
   display: none;
 }
 
@@ -15,6 +15,10 @@
   }
   .wrap_content{
   max-width: 617px;
+  padding-left: 50px;
+  @include onlylange(800px){
+    padding-left: 0;
+  }
   }
   .flec-container{
     padding-top: 28px;
@@ -72,4 +76,103 @@
       }
     }
   }
+}
+
+// services
+.services{
+  background: #F0EBE5;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  .wrap_conten{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 50px;
+    @include onlylange(960px){
+      width: 90%;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+    .description{
+      max-width: 853px;
+      margin-bottom: 64px;
+    }
+  }
+  .swiper{
+    max-width: 1440px;
+    height: 512px;
+    @include onlylange(1500px){
+      width: 90%;
+    }
+    .swiper-wrapper{
+      .swiper-slide{
+        max-width: 536px;
+        img.img-slide{
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+          // @include onlylange(768px){
+          //   height: 200px;
+          // }
+        }
+        .action-buttons{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 34px;
+          @include onlylange(420px){
+            flex-direction: column;
+          }
+          button{
+            display: block;
+            background: none;
+            border: solid 1px  #A79DA1;
+            color: #A79DA1;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            font-family: 'Amiri';
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+
+            &:hover{
+              background: rgba(167, 157, 161, 0.2);
+              color: #4A4A49;
+              border-color: #4A4A49 ;
+            }
+            &.link-request{
+              padding-left: 30px;
+              position: relative;
+              padding-top: 5px;
+              @include onlylange(420px){
+                margin-top: 15px;
+              }
+              svg{
+                top: 4px;
+                left: 7px;
+                position: absolute;
+                &:hover{
+                  path{
+                    stroke: #4A4A49 ;
+                  }
+                }
+                path{
+                  stroke:  #A79DA1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      top: 500px;
+      left: 5%;
+      @include onlylange(1500px){
+        width: 90%;
+      }
+    }
+  }
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: #666664;
 }
