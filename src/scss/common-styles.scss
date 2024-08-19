@@ -61,9 +61,12 @@ h2{
   @include onlylange(465px){
     font-size: 23px;
   }
-
-
-
+}
+h3{
+  color:#4a4a49;
+  font-size: 23px;
+  font-family: 'Inter Regular';
+  line-height:24px;
 }
 
 p{

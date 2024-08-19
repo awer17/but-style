@@ -7,7 +7,7 @@
 
 // about
 .about{
-  background: #ffff;
+  background: #F9F7F7;
   padding-top: 128px;
   padding-bottom: 270px;
   @include onlylange(771px){
@@ -82,7 +82,7 @@
 .services{
   background: #F0EBE5;
   padding-top: 128px;
-  padding-bottom: 128px;
+  padding-bottom: 96px;
   .wrap_conten{
     max-width: 1200px;
     margin: 0 auto;
@@ -129,10 +129,9 @@
             color: #A79DA1;
             text-transform: uppercase;
             padding: 4px 10px;
-            font-family: 'Amiri';
+            font-family: 'Inter Light';
             cursor: pointer;
             transition: background-color 0.5s ease;
-
             &:hover{
               background: rgba(167, 157, 161, 0.2);
               color: #4A4A49;
@@ -163,12 +162,52 @@
         }
       }
     }
-
     .swiper-pagination {
-      top: 500px;
+      top: 460px;
       left: 5%;
       @include onlylange(1500px){
         width: 90%;
+      }
+      @include onlylange(420px){
+        top: 495px;
+      }
+    }
+    .wrapper-btn{
+      position: absolute;
+      top: 200px;
+      right: 40px;
+      border-radius: 10px;
+      @include onlylange(1024px){
+        display: none;
+      }
+      .swiper-button-next, .swiper-button-prev{
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.5);
+        border: solid 1px rgba(123, 119, 121, 0.8);
+        margin-left: -15px;
+      &:hover{
+        background: rgba(167, 157, 161, 0.8);
+      }
+        &::after{
+          content: '';
+          position: static;
+        }
+      }
+      .swiper-button-prev{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: none;
+      }
+      .swiper-button-next{
+        border-top-right-radius: 0 ;
+        border-bottom-right-radius: 0;
+        left: -18px;
+        border-right: none;
+        img{
+          padding: 3px;
+          margin-top: -1px;
+          transform: rotate(180deg);
+        }
       }
     }
   }
