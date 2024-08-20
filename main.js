@@ -1,8 +1,8 @@
 import "normalize.css";
 import './src/scss/index.scss';
 import './src/js/animacia_about';
-import './src/js/slider'
-import './src/js/slider-rev'
+import './src/js/slider';
+import './src/js/slider-rev';
 
 
 const burgerMenu = document.querySelector('.burger-menu');
