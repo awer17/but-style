@@ -1,11 +1,3 @@
-// import Swiper from 'swiper';
-// // import Swiper styles
-// import 'swiper/css';
-
-// // import Swiper and modules styles
-
-
-
 
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 2.5,
@@ -39,6 +31,5 @@ var swiper = new Swiper('.mySwiper', {
     },
 
   }
-
 });
 

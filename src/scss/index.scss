@@ -1,9 +1,6 @@
 @import '/src/scss/common-styles.scss';
 
 // main
-  .reviews{
-  display: none;
-}
 
 // about
 .about{
@@ -214,4 +211,40 @@
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
   background: #666664;
+}
+
+.reviews{
+  background: #F9F7F7;
+  padding-top: 160px;
+  padding-bottom: 210px;
+  .content{
+    padding-left: 50px;
+    p{
+      max-width: 864px;
+      margin-top: 48px;
+      margin-bottom: 64px;
+    }
+    img{
+      margin-bottom: 46px;
+    }
+  }
+  .swiper{
+    height: 600px;
+    .swiper-slide{
+      img.img_content-slide{
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+      .stars{
+        width: 144px;
+        margin-top: 24px;
+        img{
+          width: 23px;
+          height: 23px;
+          padding-left: 2px;
+        }
+      }
+    }
+  }
 }
