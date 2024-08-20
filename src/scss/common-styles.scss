@@ -429,7 +429,8 @@ section.hero{
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto 120%; // Устанавливаем начальный размер фона
-  animation: scaleBackground 10s ease-in-out forwards; // Анимация масштаба
+  transition: transform .4s ease;
+  // animation: scaleBackground 3s ease-in-out forwards; // Анимация масштаба
   background-size: cover;
   height: 388px;
   position: fixed;
@@ -456,7 +457,7 @@ section.hero{
 //     background-position: center center;
 //   }
 //   100% {
-//     background-size: auto 130% ;
+//     background-size: auto 125% ;
 //     background-position: center center;
 //   }
 // }
