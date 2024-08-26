@@ -1,8 +1,5 @@
 @import '/src/fonts/transfonter.org-20240714-221347/stylesheet.css';
 @import '/src/fonts/transfonter.org-20240715-004456/stylesheet.css';
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
 // @import '/node_modules/normalize.css/normalize.css';
 
 body{
@@ -12,6 +9,7 @@ body{
     overflow: hidden;
   }
 }
+
 
 @mixin onlylange($w) {
   @media only screen and (max-width: $w)
@@ -83,10 +81,6 @@ p{
   @include onlylange(465px){
     font-size: 15px;
   }
-
-
-
-
 }
 
 
@@ -399,26 +393,28 @@ header{
         }
       }
     }
-    div.social_network{
-      width: 210px;
-      display: flex;
-      margin-left: auto;
-      justify-content: space-between;
-      .box_linc{
-        border: solid 1px #373737;
-        width: 64px;
-        height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: border-color 0.8s ease;
-        &:hover{
-          border-color: #ffff;
-        }
-      }
+  }
+}
+
+div.social_network{
+  width: 210px;
+  display: flex;
+  margin-left: auto;
+  justify-content: space-between;
+  .box_linc{
+    border: solid 1px #373737;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.8s ease;
+    &:hover{
+      border-color: #ffff;
     }
   }
 }
+
 .active_nav{
   top: 0;
   visibility: visible;
@@ -451,24 +447,196 @@ section.hero{
 }
 
 
-// @keyframes scaleBackground {
-//   0% {
-//     background-size: auto 120%;
-//     background-position: center center;
-//   }
-//   100% {
-//     background-size: auto 125% ;
-//     background-position: center center;
-//   }
-// }
+
 
 // footer
 footer{
-  // position: fixed;
+  padding-top: 40px;
+  position: relative;
   width: 100%;
-  height: 100vh;
   top: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
+  z-index: 2;
+  background: #212121;
+  .wrap{
+    margin-top: 88px;
+    .logo-footer{
+      margin-left: 20px;
+      margin-bottom: 80px;
+    }
+    div.nav-footer{
+      border-top: solid 1px #373737;
+      padding-top: 40px;
+      border-bottom: solid 5px #373737;
+      padding-bottom: 40px;
+      padding-left: 10px;
+      padding-right: 10px;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+        li{
+          list-style: none;
+          a{
+            color: $color_light;
+            text-decoration: none;
+            font-family: 'Amiri';
+            font-style: 18px;
+          &:hover{
+            color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .inform{
+      margin-top: 57px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .form{
+        .title{
+          font-family: 'Inter Light';
+          font-size: 18px;
+          color: $color_light;
+          margin-bottom: 0;
+        }
+        .context{
+          font-family: 'Inter Light';
+          font-size: 13px;
+          color: $color_light;
+          margin-top: 5px;
+        }
+        form{
+          margin-top: 64px;
+          width: 440px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: 63px 63px 63px ;
+          input{
+            display: block;
+            background: #212121;
+            border: solid 1px #373737;
+            font-size: 11px;
+            padding-left: 17px;
+            // padding: 24px 17px;
+            color: #A79DA1;
+            margin: 0;
+            box-sizing: border-box;
+            width: 100%;
+            &::placeholder{
+              color: #A79DA1;
+            }
+            &.name-from{
+              grid-column: 1 / 3;
+              grid-row: 1;
+            }
+            &.surname{
+              grid-column: 3 / 5;
+              grid-row: 1;
+            }
+            &.phone{
+              grid-column: 1 / 4;
+              grid-row: 2;
+            }
+            &.email{
+              grid-column: 1 / 4;
+              grid-row: 3;
+            }
+          }
+          button{
+            grid-column: 4;
+            grid-row: 3;
+          }
+          div.time{
+            grid-column: 4;
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: solid 1px #373737;
+            label{
+              padding-top:11px;
+              color: #A79DA1;
+              font-size: 11px;
+              padding-bottom: 3px;
+            }
+            select{
+              // display: block;
+              margin: 0 auto;
+              color: #A79DA1;
+              font-size: 13px;
+              border: none;
+              // border: solid 1px #373737;
+              padding: 3px;
+              background: #212121;
+            }
+          }
+          button{
+            border: solid 1px #373737;
+            color: #A79DA1;
+            background: #212121;
+            cursor: pointer;
+            &:hover{
+              color: #A79DA1;
+              background: rgba(167, 157, 161, 0.2);
+            }
+          }
+        }
+      }
+      .contacts{
+        margin-top: auto;
+        .title{
+          font-size: 18px;
+          margin-bottom: 26px;
+          color: #A79DA1;
+          text-align: right;
+        }
+        .address{
+          color: #f3f3f3;
+          text-align: right;
+          font-size: 18px;
+        }
+        a.link{
+          margin-top: 0px;
+          margin-bottom: 0px;
+          display: block;
+          font-size: 18px;
+          margin-bottom: 0px;
+          color: #A79DA1;
+          text-align: right;
+          text-decoration: none;
+          &:hover{
+            color: #f3f3f3;
+          }
+        }
+        .social_network{
+          margin-top: 10px;
+        }
+      }
+    }
+    .site-info{
+      border-top: solid 1px #373737;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      span{
+        color: #A79DA1;
+        font-size: 11px;
+      }
+      a{
+        color: #A79DA1;
+        font-size: 11px;
+        text-decoration: none;
+        &:hover{
+          color: #f3f3f3;
+        }
+      }
+      a.segroup{
+        color: #666664;
+        margin-left: 20px;
+        &:hover{
+          color: #A79DA1;
+        }
+      }
+    }
+  }
 }
