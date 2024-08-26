@@ -172,7 +172,6 @@ header.start_scroll{
   }
 }
 header{
-  // outline: none;
   position: relative;
   &::before{
     content: '';
@@ -620,7 +619,7 @@ footer{
               grid-row: 3;
             }
           }
-          @include onlylange(420pc){
+          @include onlylange(420px){
             grid-template-rows: repeat(6, 63px) ;
             input{
               &.phone{

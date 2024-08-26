@@ -57,3 +57,7 @@ function liClick(event) {
 }
 
 document.addEventListener('click', liClick);
+
+document.querySelector('.btn-estimat').addEventListener('click', function() {
+  window.location.href = 'estimat.html';
+});
