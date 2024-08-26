@@ -470,10 +470,18 @@ footer{
       padding-bottom: 40px;
       padding-left: 10px;
       padding-right: 10px;
+      @include onlylange(530px){
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 0px;
+      }
       ul{
         display: flex;
         justify-content: space-between;
         padding-left: 0;
+        @include onlylange(530px){
+          display: none;
+        }
         li{
           list-style: none;
           a{
@@ -493,7 +501,15 @@ footer{
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
+      @include onlylange(770px){
+        flex-direction: column;
+        align-items: center;
+      }
       .form{
+        @include onlylange(520px){
+          width: 90%;
+        }
+
         .title{
           font-family: 'Inter Light';
           font-size: 18px;
@@ -511,7 +527,10 @@ footer{
           width: 440px;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: 63px 63px 63px ;
+          grid-template-rows: 63px 63px 63px;
+          @include onlylange(520px){
+            width: 100%;
+          }
           input{
             display: block;
             background: #212121;
@@ -571,6 +590,61 @@ footer{
               background: #212121;
             }
           }
+          @include onlylange(520px){
+            grid-template-rows: repeat(4, 63px) ;
+            grid-template-columns: repeat(3 , 1fr) 110px;
+            input{
+              &.name-from{
+                grid-column: 1 / 5;
+                grid-row: 1;
+              }
+              &.surname{
+                grid-column: 1 /5;
+                grid-row: 2;
+              }
+              &.phone{
+                grid-column: 1 / 5;
+                grid-row: 3;
+              }
+              &.email{
+                grid-column: 1 / 4;
+                grid-row: 4 /5;
+              }
+            }
+            button{
+              grid-column: 4;
+              grid-row: 4;
+            }
+            div.time{
+              grid-column: 4;
+              grid-row: 3;
+            }
+          }
+          @include onlylange(420pc){
+            grid-template-rows: repeat(6, 63px) ;
+            input{
+              &.phone{
+                grid-column: 1 / 5;
+                grid-row: 3;
+              }
+              &.email{
+                grid-column: 1 / 5;
+                grid-row: 5;
+              }
+            }
+            button{
+              grid-column: 1 / 5;
+              grid-row: 6;
+            }
+            div.time{
+              grid-column: 1 / 5;
+              grid-row: 4;
+              flex-direction: row;
+              padding-left: 17px;
+
+            }
+
+          }
           button{
             border: solid 1px #373737;
             color: #A79DA1;
@@ -585,14 +659,18 @@ footer{
       }
       .contacts{
         margin-top: auto;
+        @include onlylange(770px){
+          margin-left: auto;
+          margin-top: 30px;
+        }
         .title{
           font-size: 18px;
           margin-bottom: 26px;
-          color: #A79DA1;
+          color: #666664;
           text-align: right;
         }
         .address{
-          color: #f3f3f3;
+          color: #666664;
           text-align: right;
           font-size: 18px;
         }
