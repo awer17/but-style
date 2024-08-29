@@ -4,9 +4,7 @@
       @content;
   }
 }
-main{
-  padding-bottom: 0;
-}
+
 
 .services .swiper .swiper-wrapper .swiper-slide img.img-slide{
   height: 220px;
@@ -21,10 +19,16 @@ main.services{
       .wrapp{
         max-width: 1425px;
         margin: 0 auto;
+        padding-bottom: 120px;
       }
       .title{
         padding-left: 135px;
-        width: 853px;
+        max-width: 853px;
+        @include onlylange(1060px){
+          width: 90%;
+          padding: 0;
+          margin: 0 auto;
+        }
       }
       .context{
         margin-top: 64px;
@@ -51,7 +55,7 @@ main.services{
             }
           }
         }
-        .select-list{
+        ._wrap{
           display: none;
         }
         .wrap_services{
@@ -64,12 +68,20 @@ main.services{
           @include onlylange(1274px){
             max-width: 70%;
           }
+          @include onlylange(1060px){
+            margin: 0 auto;
+            border: none;
+            max-width: 90%;
+          }
           .item_details{
             // item_details
             display: none;
           }
           .swiper{
-            height: 820px;
+            height: 725px;
+            @include onlylange(819px){
+              height: 380px;
+            }
             .swiper-wrapper{
               height: 650px;
               width: 100%;
@@ -78,7 +90,7 @@ main.services{
               }
             }
             .wrapper-btn{
-              top: calc(50% - 26px) ;
+              top: calc(50% - 45px) ;
             }
             .swiper-pagination{
               top: calc(100% - 6px);
@@ -88,7 +100,31 @@ main.services{
             }
           }
         }
+        @include onlylange(1060px){
+          flex-direction: column;
+          margin: 0 auto;
+          .wrap-list{
+            display: none;
+          }
+          ._wrap{
+            display:block;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            .select-list{
+              display: block;
+              margin: 0 auto;
+              border-radius: 0;
+              padding: 12px 50px;
+              border: solid 1px #212121 ;
+              background: none;
+            }
+          }
+        }
       }
     }
   }
+}
+
+main{
+  padding-bottom: 0;
 }

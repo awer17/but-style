@@ -11,8 +11,8 @@ var swiper = new Swiper('.mySwiper2', {
   },
   // spaceBetween: 40,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-prev',
+    prevEl: '.swiper-button-next',
   },
   pagination: {
     el: ".swiper-pagination",
@@ -20,15 +20,28 @@ var swiper = new Swiper('.mySwiper2', {
   },
   allowTouchMove: true,
   breakpoints: {
-    // 300:{
-    //   slidesPerView: 1,
-    //   spaceBetween: 20,
-    //   },
-    // 440:{
-    //     slidesPerView: 1.2,
-    //     spaceBetween: 20,
-    // },
-    780: {
+    300:{
+      slidesPerView: 1,
+      spaceBetween: 20,
+      grid: {
+        rows: 1,
+      },
+      },
+    480:{
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      grid: {
+        rows: 1,
+      },
+      },
+    606:{
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+      grid: {
+        rows: 1,
+      },
+    },
+    820: {
         slidesPerView: 2,
         spaceBetween: 30,
     },
