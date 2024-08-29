@@ -3,6 +3,8 @@ import './src/scss/index.scss';
 import './src/js/animacia_about';
 import './src/js/slider';
 import './src/js/slider-rev';
+import './src/js/slider2'
+import './src/scss/services.scss'
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const heroSection = document.querySelector('.hero');

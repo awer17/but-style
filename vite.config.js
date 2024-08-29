@@ -4,4 +4,7 @@ export default {
   plugins: [
     Inspect()
   ],
+  css: {
+    devSourcemap: true,
+  },
 }

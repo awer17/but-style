@@ -1,0 +1,94 @@
+@mixin onlylange($w) {
+  @media only screen and (max-width: $w)
+  {
+      @content;
+  }
+}
+main{
+  padding-bottom: 0;
+}
+
+.services .swiper .swiper-wrapper .swiper-slide img.img-slide{
+  height: 220px;
+}
+
+main.services{
+  .hero{
+    background-image: url(../image/background_helo._services.jpg);
+  }
+  div.main{
+    .services{
+      .wrapp{
+        max-width: 1425px;
+        margin: 0 auto;
+      }
+      .title{
+        padding-left: 135px;
+        width: 853px;
+      }
+      .context{
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-between;
+        .wrap-list{
+          ul{
+            padding-left: 0;
+            width: 250px;
+            @include onlylange(1500px){
+              padding-left: 50px;
+            }
+            li{
+              font-size: 23px;
+              font-family: 'Inter Ligh';
+              list-style-type: none;
+              color: #766F6F;
+              margin-top: 10px;
+              transition: 0.8s;
+              cursor: pointer;
+              &:hover{
+                color: #212121;
+              }
+            }
+          }
+        }
+        .select-list{
+          display: none;
+        }
+        .wrap_services{
+          max-width: 974px;
+          padding-left: 50px;
+          border-left: 1px solid #000;
+          @include onlylange(1500px){
+            padding-left: 0px;
+          }
+          @include onlylange(1274px){
+            max-width: 70%;
+          }
+          .item_details{
+            // item_details
+            display: none;
+          }
+          .swiper{
+            height: 820px;
+            .swiper-wrapper{
+              height: 650px;
+              width: 100%;
+              .swiper-slide{
+                width: 418px;
+              }
+            }
+            .wrapper-btn{
+              top: calc(50% - 26px) ;
+            }
+            .swiper-pagination{
+              top: calc(100% - 6px);
+              left: 10%;
+              right: 10%;
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
