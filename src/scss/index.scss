@@ -210,6 +210,9 @@
   background: #666664;
 
 }
+.swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper{
+  transition: 3s;
+}
 
 .reviews{
   background: #F9F7F7;

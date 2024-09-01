@@ -8,7 +8,7 @@ var swiper = new Swiper('.mySwiper-reviews', {
   spaceBetween: 60,
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 10000,
     disableOnInteraction: false,
   },
 
