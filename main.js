@@ -1,11 +1,11 @@
 import "normalize.css";
 import './src/scss/index.scss';
+import './src/js/data_json.js'
 import './src/js/animacia_about';
 import './src/js/slider';
 import './src/js/slider-rev';
-import './src/js/slider2'
-import './src/scss/services.scss'
-
+import './src/js/slider2';
+import './src/scss/services.scss';
 // document.addEventListener('DOMContentLoaded', () => {
 //   const heroSection = document.querySelector('.hero');
 //   let currentScale = 120; // Начальный масштаб фона в процентах
