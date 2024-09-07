@@ -6,25 +6,7 @@ import './src/js/slider';
 import './src/js/slider-rev';
 import './src/js/slider2';
 import './src/scss/services.scss';
-// document.addEventListener('DOMContentLoaded', () => {
-//   const heroSection = document.querySelector('.hero');
-//   let currentScale = 120; // Начальный масштаб фона в процентах
-//   const targetScale = 125; // Конечный масштаб фона
-//   const duration = 10000; // Длительность анимации в миллисекундах
-//   const interval = 5000 / 32; // Время между кадрами для 60fps
-//   const increment = (targetScale - currentScale) / (duration / interval); // Шаг увеличения
 
-//   const zoomInBackground = () => {
-//     if (currentScale < targetScale) {
-//       currentScale += increment;
-//       heroSection.style.backgroundSize = ` ${currentScale}%`;
-//       requestAnimationFrame(zoomInBackground);
-//     }
-//   };
-
-//   // Запускаем анимацию при загрузке страницы
-//   zoomInBackground();
-// });
 
 
 const burgerMenu = document.querySelector('.burger-menu');

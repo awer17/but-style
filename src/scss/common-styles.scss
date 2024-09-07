@@ -1,6 +1,9 @@
 @import '/src/fonts/transfonter.org-20240714-221347/stylesheet.css';
 @import '/src/fonts/transfonter.org-20240715-004456/stylesheet.css';
 // @import '/node_modules/normalize.css/normalize.css';
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   margin: 0 auto;
