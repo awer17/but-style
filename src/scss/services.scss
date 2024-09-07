@@ -5,6 +5,8 @@
   }
 }
 
+$color_light: #D9D9D9;
+$color_dark: #A79DA1;
 
 .services .swiper .swiper-wrapper .swiper-slide img.img-slide{
   height: 220px;
@@ -74,10 +76,54 @@ main.services{
             max-width: 90%;
           }
           .item_details{
-            // item_details
-            display: none;
+            @include onlylange(819px){
+              height: 380px;
+            }
+            ._title{
+              display: flex;
+              h2.detal{
+                font-size: 40px;
+                width: 60%;
+              }
+            }
+            .btn{
+              border: solid 1px $color_dark;
+              color: $color_dark;
+              svg{
+                path{
+                  stroke:$color_dark;
+                }
+              }
+            }
+            button{
+              padding: 12px 40px 12px 72px;
+              background: none;
+              border: solid 1px $color_light;
+              position: relative;
+              font-family: "Avenir Next";
+              font-size: 18px;
+              color: $color_light;
+              position: relative;
+              z-index: 4;
+              cursor: pointer;
+              top: -10px;
+              transition: background-color 0.5s ease;
+              @include onlylange(935px){
+                max-width: 290px;
+              }
+              &:hover{
+                background: rgba(167, 157, 161, 0.2);
+              }
+              svg{
+                position: absolute;
+                left: 40px;
+                top: calc( 50% - 17px / 2)
+              }
+            }
+
           }
           .swiper{
+            display: none;
             height: 725px;
             @include onlylange(819px){
               height: 380px;
