@@ -33,6 +33,7 @@ main.services{
         }
       }
       .context{
+        width: 100%;
         margin-top: 64px;
         display: flex;
         justify-content: space-between;
@@ -61,69 +62,126 @@ main.services{
           display: none;
         }
         .wrap_services{
-          max-width: 974px;
           padding-left: 50px;
           border-left: 1px solid #000;
+          max-width: calc(100% - 303px);
           @include onlylange(1500px){
             padding-left: 0px;
-          }
-          @include onlylange(1274px){
-            max-width: 70%;
           }
           @include onlylange(1060px){
             margin: 0 auto;
             border: none;
             max-width: 90%;
           }
+          .btn{
+            margin-left: auto;
+            margin-right: 50px;
+            padding: 12px 40px 12px 72px;
+            background: none;
+            border: solid 1px $color_dark;
+            color: $color_dark;
+            height: 44px;
+            position: relative;
+            font-family: "Avenir Next";
+            font-size: 18px;
+            color: $color_dark;
+            position: relative;
+            z-index: 4;
+            cursor: pointer;
+            top: -10px;
+            transition: background-color 0.5s ease;
+            @include onlylange(935px){
+              max-width: 290px;
+            }
+            &:hover{
+              background: rgba(167, 157, 161, 0.2);
+            }
+            svg{
+              position: absolute;
+              left: 40px;
+              top: calc( 50% - 17px / 2)
+            }
+
+            svg{
+              path{
+                stroke:$color_dark;
+              }
+            }
+          }
+
           .item_details{
-            @include onlylange(819px){
-              height: 380px;
+            @include onlylange(1500px){
+              padding-left: 50px;
+              padding-right: 50px;
+            }
+            @include onlylange(1060px){
+              padding-left: 0px;
+              padding-right: 0px;
             }
             ._title{
               display: flex;
+              justify-content: space-between;
+              align-items: center;
               h2.detal{
                 font-size: 40px;
-                width: 60%;
+                max-width: 600px;
+                margin: 0;
+                @include onlylange(1210px){
+                  font-size: 30px;
+                  max-width: 60%;
+                }
               }
-            }
-            .btn{
-              border: solid 1px $color_dark;
-              color: $color_dark;
-              svg{
-                path{
-                  stroke:$color_dark;
+              @include onlylange(898px){
+                flex-direction: column-reverse;
+                align-items: normal;
+                h2.detal{
+                  max-width: 100%;
+                  text-align: center;
+                  margin: 0 auto;
+                  margin-top: 20px;
+                }
+                .btn{
+                  margin-top: 20px;
+                  margin-left: auto;
                 }
               }
             }
-            button{
-              padding: 12px 40px 12px 72px;
-              background: none;
-              border: solid 1px $color_light;
-              position: relative;
-              font-family: "Avenir Next";
-              font-size: 18px;
-              color: $color_light;
-              position: relative;
-              z-index: 4;
-              cursor: pointer;
-              top: -10px;
-              transition: background-color 0.5s ease;
-              @include onlylange(935px){
-                max-width: 290px;
+            .descripcion{
+              display: flex;
+              gap: 50px;
+              align-items: center;
+              &._next{
+                flex-direction: row-reverse;
+                @include onlylange(1200px){
+                  flex-direction: column-reverse;
+                  padding-bottom: 40px;
+                }
               }
-              &:hover{
-                background: rgba(167, 157, 161, 0.2);
+              @include onlylange(1200px){
+                flex-direction: column-reverse;
+                padding-top: 40px;
+                gap: 0px;
               }
-              svg{
-                position: absolute;
-                left: 40px;
-                top: calc( 50% - 17px / 2)
+            }
+            img{
+              width: 360px;
+              height: 250px;
+              object-fit: cover;
+              @include onlylange(1200px){
+                width: 80%;
+                height: 200px;
               }
             }
 
           }
           .swiper{
-            display: none;
+            width: 100%;
+            @include onlylange(1500px){
+              max-width: 90%;
+            }
+            // @include onlylange(1274px){
+            //     max-width: 70%;
+            //   }
             height: 725px;
             @include onlylange(819px){
               height: 380px;
@@ -174,3 +232,17 @@ main.services{
 main{
   padding-bottom: 0;
 }
+.btn{
+  display: none;
+}
+.mySwiper2{
+  display: none;
+}
+.item_details{
+  display: none;
+}
+.active{
+  display: block;
+}
+
+
