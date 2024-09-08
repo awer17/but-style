@@ -46,6 +46,6 @@ document.addEventListener('click', liClick);
 //   window.location.href = 'estimat.html';
 // });
 
-document.querySelector('.btn-estimat').addEventListener('click', function() {
-  window.location.href = 'estimat.html';
-});
+// document.querySelectorA('.btn-estimat1').addEventListener('click', function() {
+//   window.location.href = 'estimat.html';
+// });

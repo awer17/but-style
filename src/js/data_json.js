@@ -68,9 +68,28 @@ if (currentPage.endsWith('services.html')) {
     renderItem(itemCode)
     });
   })
+  const selectList = document.querySelector('.select-list');
+  selectList.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    let savedValue = selectedValue;
+    renderItem(savedValue)
+});
+
 
 change();
 }
+
+function btnLink(params) {
+  const btnLing = document.querySelectorAll('.btn-estimat')
+  console.log(btnLing)
+  btnLing.forEach (item => {
+    item.addEventListener('click', (event) => {
+      console.log(event)
+      window.location.href = 'estimat.html';
+    })
+  })
+}
+btnLink()
 
 const listItems = document.querySelectorAll('.list-name li');
 
@@ -79,17 +98,6 @@ listItems.forEach(item => {
     const value = item.getAttribute('value');
     renderItem(value)
   });
-});
-
-
-const selectList = document.querySelector('.select-list');
-
-
-selectList.addEventListener('change', (event) => {
-
-  const selectedValue = event.target.value;
-  let savedValue = selectedValue;
-  renderItem(savedValue)
 });
 
 
@@ -136,7 +144,7 @@ function renderItem(code) {
                     </div>
                     <img src="./src/image/services/services-slider/${foundService[0].img2}" alt="${foundService[0].name}">
                   </div>
-                  <button class="btn btn-estimat">
+                  <button class="btn btn-estimat active">
                     <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
                       <path d="M11.46 5L15.46 9M15.46 9L11.46 13.5M15.46 9H2.45996" stroke="#D9D9D9"></path>
                     </svg>
@@ -146,5 +154,6 @@ function renderItem(code) {
     swiperElement.classList.remove('active');
     itemDetailsElement.classList.add('active');
     button1.classList.add('active');
+    btnLink()
 }
 
