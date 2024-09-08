@@ -1,13 +1,22 @@
 import jsonServicse from '../json/servicss.json';
-
-
-
-
-
-// Получаем текущий URL страницы
 const currentPage = window.location.pathname;
+const currentUrl = window.location.href;
 
-// Проверяем, находится ли пользователь на страницах index.html или services.html
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+
+let button1 = document.querySelector('.btn.back-list');
+const swiperElement = document.querySelector('.swiper');
+const itemDetailsElement = document.querySelector('.item_details');
+let itemCode = "";
+
+console.log('ID:', id);
+
+if( id > 0){
+  renderItem(id)
+}
+
+
 if (currentPage.endsWith('index.html') || currentPage.endsWith('services.html')) {
   const swiperWrapper = document.querySelector('.swiper-wrapper');
   swiperWrapper.textContent = ''
@@ -36,7 +45,7 @@ document.querySelectorAll('.detsls-service').forEach(button => {
   button.addEventListener('click', (event) => {
     const btnId = event.target.getAttribute('data-btn-id');
     if (currentPage === '/' || currentPage.endsWith('index.html') ) {
-      window.location.href = `services.html?id=${btnId}`;
+      window.location.href = `services.html?id=${btnId}#context`;
     }
     else{
     }
@@ -52,10 +61,6 @@ document.querySelectorAll('.link-request' , ).forEach(button => {
   });
 });
 
-let button1 = document.querySelector('.btn.back-list');
-const swiperElement = document.querySelector('.swiper');
-const itemDetailsElement = document.querySelector('.item_details');
-let itemCode = "";
 
 if (currentPage.endsWith('services.html')) {
 
@@ -63,9 +68,6 @@ if (currentPage.endsWith('services.html')) {
     button.addEventListener('click', (event) => {
     itemCode = event.target.getAttribute('data-btn-id');
     renderItem(itemCode)
-    swiperElement.classList.remove('active');
-    itemDetailsElement.classList.add('active');
-    button1.classList.add('active');
     });
   })
 
@@ -111,5 +113,9 @@ function renderItem(code) {
                     Calculate cost online
                   </button>
                 `
+    swiperElement.classList.remove('active');
+    itemDetailsElement.classList.add('active');
+    button1.classList.add('active');
+
 }
 
