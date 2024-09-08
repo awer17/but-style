@@ -3,7 +3,7 @@ const currentPage = window.location.pathname;
 const currentUrl = window.location.href;
 
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
+let id = urlParams.get('id');
 
 let button1 = document.querySelector('.btn.back-list');
 const swiperElement = document.querySelector('.swiper');
@@ -37,8 +37,6 @@ if (currentPage.endsWith('index.html') || currentPage.endsWith('services.html'))
       </div>
     `;
   });
-} else {
-  console.log('Script is not running on this page.');
 }
 
 document.querySelectorAll('.detsls-service').forEach(button => {
@@ -63,7 +61,7 @@ document.querySelectorAll('.link-request' , ).forEach(button => {
 
 
 if (currentPage.endsWith('services.html')) {
-
+  listServicer();
   document.querySelectorAll('.detsls-service').forEach(button => {
     button.addEventListener('click', (event) => {
     itemCode = event.target.getAttribute('data-btn-id');
@@ -72,6 +70,39 @@ if (currentPage.endsWith('services.html')) {
   })
 
 change();
+}
+
+const listItems = document.querySelectorAll('.list-name li');
+
+listItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const value = item.getAttribute('value');
+    renderItem(value)
+  });
+});
+
+
+const selectList = document.querySelector('.select-list');
+
+
+selectList.addEventListener('change', (event) => {
+
+  const selectedValue = event.target.value;
+  let savedValue = selectedValue;
+  renderItem(savedValue)
+});
+
+
+function listServicer  () {
+  let ulList = document.querySelector('.list-name')
+  const listSelect = document.querySelector('.select-list');
+  listSelect.innerHTML = ''
+  ulList.innerHTML = ""
+  jsonServicse.forEach(item =>{
+    ulList.innerHTML += `<li value="${item.code}">${item.name}</li>`;
+    listSelect.innerHTML += `<option value="${item.code}">${item.name}</option>
+    `
+  })
 }
 
 function change (){
@@ -84,7 +115,6 @@ function change (){
 
 function renderItem(code) {
   const foundService = jsonServicse.filter(item => item.code === code);
-  console.log(foundService[0])
   itemDetailsElement.innerHTML = `
                   <div class="_title">
                     <h2 class="detal">
@@ -106,7 +136,7 @@ function renderItem(code) {
                     </div>
                     <img src="./src/image/services/services-slider/${foundService[0].img2}" alt="${foundService[0].name}">
                   </div>
-                  <button class="btn btn-estimat1">
+                  <button class="btn btn-estimat">
                     <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
                       <path d="M11.46 5L15.46 9M15.46 9L11.46 13.5M15.46 9H2.45996" stroke="#D9D9D9"></path>
                     </svg>
@@ -116,6 +146,5 @@ function renderItem(code) {
     swiperElement.classList.remove('active');
     itemDetailsElement.classList.add('active');
     button1.classList.add('active');
-
 }
 
