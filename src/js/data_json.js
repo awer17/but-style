@@ -82,35 +82,27 @@ function change (){
 
 function renderItem(code) {
   const foundService = jsonServicse.filter(item => item.code === code);
-  console.log(itemDetailsElement)
+  console.log(foundService[0])
   itemDetailsElement.innerHTML = `
                   <div class="_title">
                     <h2 class="detal">
-                      <span>Engineered Hardwood:</span> Key Benefits and Installation Tips
+                      ${foundService[0].title}
                     </h2>
                   </div>
                   <div class="descripcion">
                     <div class="text">
-                      <p>Engineered hardwood is a popular choice for homeowners seeking the beauty of natural wood with added durability. This flooring option combines a real wood veneer with layers of plywood, creating a stable and resilient surface that’s perfect for various environments. In this article, we delve into the benefits of engineered hardwood and offer tips for a successful installation.
-                      </p>
-                      <p>
-                        Preparation is the first step to a successful installation. Ensure the subfloor is clean, dry, and level, as these factors are critical for the longevity of your hardwood floor. Acclimating the planks to the room’s temperature and humidity for at least 48 hours is also essential to prevent warping.
-                      </p>
+                      <p>${foundService[0].description1}</p>
+                      <p>${foundService[0].description2}</p>
                     </div>
-                    <img src="./src/image/services/services-slider/engineered_hardwood.jpg" alt="Engineered Hardwood">
+                    <img src="./src/image/services/services-slider/${foundService[0].img1}" alt="${foundService[0].name}">
                   </div>
                   <div class="descripcion _next">
                     <div class="text">
-                      <p>Selecting the right installation method depends on your specific needs and the type of subfloor. Floating, glue-down, and nail-down methods each have their advantages, and the choice will depend on factors like room size, subfloor material, and personal preference. Professional advice can be invaluable in making this decision.
-                      </p>
-                      <p>
-                        During installation, precision is key. Start by laying out the planks to ensure the best visual appeal, and use spacers to maintain proper expansion gaps around the room’s perimeter. Cutting planks with care and following manufacturer instructions will ensure a seamless finish.
-                      </p>
-                      <p>
-                        Engineered hardwood is not only a stylish and durable flooring choice but also an investment in your home’s value. When installed correctly, it provides the warmth and elegance of wood, with the added benefits of stability and resistance to moisture. For the best results, consider hiring professionals who can guarantee a flawless installation.
-                      </p>
+                      <p>${foundService[0].description3}</p>
+                      <p>${foundService[0].description4}</p>
+                      <p>${foundService[0].description5}</p>
                     </div>
-                    <img src="./src/image/services/services-slider/engineered_hardwood2.jpg" alt="Engineered Hardwood">
+                    <img src="./src/image/services/services-slider/${foundService[0].img2}" alt="${foundService[0].name}">
                   </div>
                   <button class="btn btn-estimat1">
                     <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
