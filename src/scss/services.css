@@ -1,1 +1,253 @@
-.services .swiper .swiper-wrapper .swiper-slide img.img-slide{height:220px}main.services .hero{background-image:url(../image/background_helo._services.jpg)}main.services div.main .services .wrapp{max-width:1425px;margin:0 auto;padding-bottom:120px}main.services div.main .services .title{padding-left:135px;max-width:853px}@media only screen and (max-width: 1060px){main.services div.main .services .title{width:90%;padding:0;margin:0 auto}}main.services div.main .services .context{width:100%;margin-top:64px;display:flex;justify-content:space-between}main.services div.main .services .context .wrap-list ul{padding-left:0;width:250px}@media only screen and (max-width: 1500px){main.services div.main .services .context .wrap-list ul{padding-left:50px}}main.services div.main .services .context .wrap-list ul li{font-size:23px;font-family:"Inter Ligh";list-style-type:none;color:#766f6f;margin-top:10px;transition:.8s;cursor:pointer}main.services div.main .services .context .wrap-list ul li:hover{color:#212121}main.services div.main .services .context ._wrap{display:none}main.services div.main .services .context .wrap_services{padding-left:50px;border-left:1px solid #000;max-width:calc(100% - 303px)}@media only screen and (max-width: 1500px){main.services div.main .services .context .wrap_services{padding-left:0px}}@media only screen and (max-width: 1060px){main.services div.main .services .context .wrap_services{margin:0 auto;border:none;max-width:90%}}main.services div.main .services .context .wrap_services .btn{margin-left:auto;margin-right:50px;padding:12px 40px 12px 72px;background:none;border:solid 1px #a79da1;color:#a79da1;height:44px;position:relative;font-family:"Avenir Next";font-size:18px;color:#a79da1;position:relative;z-index:4;cursor:pointer;top:-10px;transition:background-color .5s ease}@media only screen and (max-width: 935px){main.services div.main .services .context .wrap_services .btn{max-width:290px}}main.services div.main .services .context .wrap_services .btn:hover{background:rgba(167,157,161,.2)}main.services div.main .services .context .wrap_services .btn svg{position:absolute;left:40px;top:calc(50% - 8.5px)}main.services div.main .services .context .wrap_services .btn svg path{stroke:#a79da1}@media only screen and (max-width: 1500px){main.services div.main .services .context .wrap_services .item_details{padding-left:50px;padding-right:50px}}@media only screen and (max-width: 1060px){main.services div.main .services .context .wrap_services .item_details{padding-left:0px;padding-right:0px}}main.services div.main .services .context .wrap_services .item_details ._title{display:flex;justify-content:space-between;align-items:center}main.services div.main .services .context .wrap_services .item_details ._title h2.detal{font-size:40px;max-width:600px;margin:0}@media only screen and (max-width: 1210px){main.services div.main .services .context .wrap_services .item_details ._title h2.detal{font-size:30px;max-width:60%}}@media only screen and (max-width: 898px){main.services div.main .services .context .wrap_services .item_details ._title{flex-direction:column-reverse;align-items:normal}main.services div.main .services .context .wrap_services .item_details ._title h2.detal{max-width:100%;text-align:center;margin:0 auto;margin-top:20px}main.services div.main .services .context .wrap_services .item_details ._title .btn{margin-top:20px;margin-left:auto}}main.services div.main .services .context .wrap_services .item_details .descripcion{display:flex;gap:50px;align-items:center}main.services div.main .services .context .wrap_services .item_details .descripcion._next{flex-direction:row-reverse}@media only screen and (max-width: 1200px){main.services div.main .services .context .wrap_services .item_details .descripcion._next{flex-direction:column-reverse;padding-bottom:40px}}@media only screen and (max-width: 1200px){main.services div.main .services .context .wrap_services .item_details .descripcion{flex-direction:column-reverse;padding-top:40px;gap:0px}}main.services div.main .services .context .wrap_services .item_details img{width:360px;height:250px;-o-object-fit:cover;object-fit:cover}@media only screen and (max-width: 1200px){main.services div.main .services .context .wrap_services .item_details img{width:80%;height:200px}}main.services div.main .services .context .wrap_services .swiper{width:100%;height:725px}@media only screen and (max-width: 1500px){main.services div.main .services .context .wrap_services .swiper{max-width:90%}}@media only screen and (max-width: 819px){main.services div.main .services .context .wrap_services .swiper{height:380px}}main.services div.main .services .context .wrap_services .swiper .swiper-wrapper{height:650px;width:100%}main.services div.main .services .context .wrap_services .swiper .swiper-wrapper .swiper-slide{width:418px}main.services div.main .services .context .wrap_services .swiper .wrapper-btn{top:calc(50% - 45px)}main.services div.main .services .context .wrap_services .swiper .swiper-pagination{top:calc(100% - 6px);left:10%;right:10%;width:80%}@media only screen and (max-width: 1060px){main.services div.main .services .context{flex-direction:column;margin:0 auto}main.services div.main .services .context .wrap-list{display:none}main.services div.main .services .context ._wrap{display:block;margin:0 auto;margin-bottom:40px}main.services div.main .services .context ._wrap .select-list{display:block;margin:0 auto;border-radius:0;padding:12px 50px;border:solid 1px #212121;background:none}}main{padding-bottom:0}.btn{display:none}.mySwiper2{display:none}.item_details{display:none}.active{display:block}
+.services .swiper .swiper-wrapper .swiper-slide img.img-slide {
+  height: 220px;
+}
+
+main.services .hero {
+  background-image: url(../image/background_helo._services.jpg);
+}
+main.services div.main .services .wrapp {
+  max-width: 1425px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+main.services div.main .services .title {
+  padding-left: 135px;
+  max-width: 853px;
+}
+@media only screen and (max-width: 1060px) {
+  main.services div.main .services .title {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+main.services div.main .services .context {
+  width: 100%;
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+main.services div.main .services .context .wrap-list ul {
+  padding-left: 0;
+  width: 250px;
+}
+@media only screen and (max-width: 1500px) {
+  main.services div.main .services .context .wrap-list ul {
+    padding-left: 50px;
+  }
+}
+main.services div.main .services .context .wrap-list ul li {
+  font-size: 23px;
+  font-family: "Inter Ligh";
+  list-style-type: none;
+  color: #766F6F;
+  margin-top: 10px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+main.services div.main .services .context .wrap-list ul li:hover {
+  color: #212121;
+}
+main.services div.main .services .context ._wrap {
+  display: none;
+}
+main.services div.main .services .context .wrap_services {
+  padding-left: 50px;
+  border-left: 1px solid #000;
+  max-width: calc(100% - 303px);
+}
+@media only screen and (max-width: 1500px) {
+  main.services div.main .services .context .wrap_services {
+    padding-left: 0px;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  main.services div.main .services .context .wrap_services {
+    margin: 0 auto;
+    border: none;
+    max-width: 90%;
+  }
+}
+main.services div.main .services .context .wrap_services .btn {
+  margin-left: auto;
+  margin-right: 50px;
+  padding: 12px 40px 12px 72px;
+  background: none;
+  border: solid 1px #A79DA1;
+  color: #A79DA1;
+  height: 44px;
+  position: relative;
+  font-family: "Avenir Next";
+  font-size: 18px;
+  color: #A79DA1;
+  position: relative;
+  z-index: 4;
+  cursor: pointer;
+  top: -10px;
+  transition: background-color 0.5s ease;
+}
+@media only screen and (max-width: 935px) {
+  main.services div.main .services .context .wrap_services .btn {
+    max-width: 290px;
+  }
+}
+main.services div.main .services .context .wrap_services .btn:hover {
+  background: rgba(167, 157, 161, 0.2);
+}
+main.services div.main .services .context .wrap_services .btn svg {
+  position: absolute;
+  left: 40px;
+  top: calc(50% - 8.5px);
+}
+main.services div.main .services .context .wrap_services .btn svg path {
+  stroke: #A79DA1;
+}
+@media only screen and (max-width: 1500px) {
+  main.services div.main .services .context .wrap_services .item_details {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  main.services div.main .services .context .wrap_services .item_details {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+main.services div.main .services .context .wrap_services .item_details ._title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.services div.main .services .context .wrap_services .item_details ._title h2.detal {
+  font-size: 40px;
+  max-width: 600px;
+  margin: 0;
+}
+@media only screen and (max-width: 1210px) {
+  main.services div.main .services .context .wrap_services .item_details ._title h2.detal {
+    font-size: 30px;
+    max-width: 60%;
+  }
+}
+@media only screen and (max-width: 898px) {
+  main.services div.main .services .context .wrap_services .item_details ._title {
+    flex-direction: column-reverse;
+    align-items: normal;
+  }
+  main.services div.main .services .context .wrap_services .item_details ._title h2.detal {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  main.services div.main .services .context .wrap_services .item_details ._title .btn {
+    margin-top: 20px;
+    margin-left: auto;
+  }
+}
+main.services div.main .services .context .wrap_services .item_details .descripcion {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+main.services div.main .services .context .wrap_services .item_details .descripcion._next {
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 1200px) {
+  main.services div.main .services .context .wrap_services .item_details .descripcion._next {
+    flex-direction: column-reverse;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main.services div.main .services .context .wrap_services .item_details .descripcion {
+    flex-direction: column-reverse;
+    padding-top: 40px;
+    gap: 0px;
+  }
+}
+main.services div.main .services .context .wrap_services .item_details img {
+  width: 360px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 1200px) {
+  main.services div.main .services .context .wrap_services .item_details img {
+    width: 80%;
+    height: 200px;
+  }
+}
+main.services div.main .services .context .wrap_services .swiper {
+  width: 100%;
+  height: 725px;
+}
+@media only screen and (max-width: 1500px) {
+  main.services div.main .services .context .wrap_services .swiper {
+    max-width: 90%;
+  }
+}
+@media only screen and (max-width: 819px) {
+  main.services div.main .services .context .wrap_services .swiper {
+    height: 380px;
+  }
+}
+main.services div.main .services .context .wrap_services .swiper .swiper-wrapper {
+  height: 650px;
+  width: 100%;
+}
+main.services div.main .services .context .wrap_services .swiper .swiper-wrapper .swiper-slide {
+  width: 418px;
+}
+main.services div.main .services .context .wrap_services .swiper .wrapper-btn {
+  top: calc(50% - 45px);
+}
+main.services div.main .services .context .wrap_services .swiper .swiper-pagination {
+  top: calc(100% - 6px);
+  left: 10%;
+  right: 10%;
+  width: 80%;
+}
+@media only screen and (max-width: 1060px) {
+  main.services div.main .services .context {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  main.services div.main .services .context .wrap-list {
+    display: none;
+  }
+  main.services div.main .services .context ._wrap {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  main.services div.main .services .context ._wrap .select-list {
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 12px 50px;
+    border: solid 1px #212121;
+    background: none;
+  }
+}
+
+main {
+  padding-bottom: 0;
+}
+
+.btn {
+  display: none;
+}
+
+.mySwiper2 {
+  display: none;
+}
+
+.item_details {
+  display: none;
+}
+
+.active {
+  display: block;
+}/*# sourceMappingURL=services.css.map */

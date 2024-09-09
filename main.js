@@ -1,6 +1,6 @@
 import "normalize.css";
 import './src/scss/index.scss';
-import './src/js/data_json.js'
+// import './src/js/data_json.js'
 import './src/js/animacia_about';
 import './src/js/slider';
 import './src/js/slider-rev';

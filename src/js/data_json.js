@@ -68,15 +68,22 @@ if (currentPage.endsWith('services.html')) {
     renderItem(itemCode)
     });
   })
-  const selectList = document.querySelector('.select-list');
-  selectList.addEventListener('change', (event) => {
-    const selectedValue = event.target.value;
-    let savedValue = selectedValue;
-    renderItem(savedValue)
+//   const selectList = document.querySelector('.select-list');
+//   selectList.addEventListener('change', (event) => {
+//     const selectedValue = event.target.value;
+//     let savedValue = selectedValue;
+//     renderItem(savedValue)
+// });
+const listItems = document.querySelectorAll('.list-name li');
+listItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const value = item.getAttribute('value');
+    renderItem(value)
+  });
 });
 
 
-change();
+
 }
 
 function btnLink(params) {
@@ -91,26 +98,23 @@ function btnLink(params) {
 }
 btnLink()
 
-const listItems = document.querySelectorAll('.list-name li');
 
-listItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const value = item.getAttribute('value');
-    renderItem(value)
-  });
-});
+
+
 
 
 function listServicer  () {
   let ulList = document.querySelector('.list-name')
+  console.log(1)
   const listSelect = document.querySelector('.select-list');
-  listSelect.innerHTML = ''
-  ulList.innerHTML = ""
-  jsonServicse.forEach(item =>{
-    ulList.innerHTML += `<li value="${item.code}">${item.name}</li>`;
-    listSelect.innerHTML += `<option value="${item.code}">${item.name}</option>
-    `
-  })
+  console.log(1)
+
+  // listSelect.textContent = ''
+  // ulList.textContent = 
+  // jsonServicse.forEach(item =>{
+  //   ulList.innerHTML = `<li value="${item.code}">${item.name}</li>`;
+  //   listSelect.innerHTML + `<option value="${item.code}">${item.name}</option>`;
+  // })
 }
 
 function change (){
