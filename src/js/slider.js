@@ -6,7 +6,7 @@ import 'swiper/css/bundle';
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 2.5,
   spaceBetween: 60,
-  loop: true,
+  // loop: true,
   navigation: {
     nextEl: '.swiper-button-prev',
     prevEl: '.swiper-button-next',
@@ -29,11 +29,7 @@ var swiper = new Swiper('.mySwiper', {
         slidesPerView: 2,
         spaceBetween: 40,
     },
-    1080: {
-      slidesPerView: 2.5,
-      spaceBetween: 60,
-    },
-
   }
 });
+console.log(1)
 

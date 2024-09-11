@@ -249,3 +249,10 @@
     }
   }
 }
+
+.services .swiper .swiper-wrapper .swiper-slide{
+  padding-right: 50px;
+  @include onlylange(1499px){
+    padding-right: 0;
+  }
+}

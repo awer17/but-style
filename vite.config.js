@@ -8,8 +8,9 @@ export default {
   build: {
     rollupOptions:{
       input: {
-        mailn: resolve(__dirname,'insex.html'),
+        mailn: resolve(__dirname,'index.html'),
         estimat: resolve(__dirname, 'estimat/index.html'),
+        services: resolve(__dirname, 'services/index.html'),
       }
     }
   },

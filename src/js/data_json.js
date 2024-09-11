@@ -68,12 +68,12 @@ if (currentPage.endsWith('services.html')) {
     renderItem(itemCode)
     });
   })
-//   const selectList = document.querySelector('.select-list');
-//   selectList.addEventListener('change', (event) => {
-//     const selectedValue = event.target.value;
-//     let savedValue = selectedValue;
-//     renderItem(savedValue)
-// });
+  const selectList = document.querySelector('.select-list');
+  selectList.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    let savedValue = selectedValue;
+    renderItem(savedValue)
+});
 const listItems = document.querySelectorAll('.list-name li');
 listItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -109,12 +109,12 @@ function listServicer  () {
   const listSelect = document.querySelector('.select-list');
   console.log(1)
 
-  // listSelect.textContent = ''
-  // ulList.textContent = 
-  // jsonServicse.forEach(item =>{
-  //   ulList.innerHTML = `<li value="${item.code}">${item.name}</li>`;
-  //   listSelect.innerHTML + `<option value="${item.code}">${item.name}</option>`;
-  // })
+  listSelect.textContent = ''
+  ulList.textContent =
+  jsonServicse.forEach(item =>{
+    ulList.innerHTML = `<li value="${item.code}">${item.name}</li>`;
+    listSelect.innerHTML + `<option value="${item.code}">${item.name}</option>`;
+  })
 }
 
 function change (){

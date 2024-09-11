@@ -30,5 +30,6 @@ var swiper = new Swiper('.mySwiper-reviews', {
       slidesPerView: 3.4,
       spaceBetween: 60,
     },
+    
   }
 });
