@@ -23,7 +23,7 @@ if (currentPage.endsWith('index.html') || currentPage.endsWith('services.html'))
   jsonServicse.forEach(item => {
     swiperWrapper.innerHTML += `
       <div class="swiper-slide">
-        <img class="img-slide" src="src/image/services/services-slider/${item.img1}" alt="${item.img1}">
+        <img class="img-slide" src="/public/services-slider/${item.img1}" alt="${item.img1}">
         <div class="action-buttons">
           <button data-btn-id="${item.code}" class="detsls-service">details</button>
           <button class="link-request">

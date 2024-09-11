@@ -5,7 +5,6 @@ import 'swiper/css/bundle';
 
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 2.5,
-  spaceBetween: 60,
   // loop: true,
   navigation: {
     nextEl: '.swiper-button-prev',
