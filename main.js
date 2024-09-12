@@ -5,7 +5,7 @@ import './src/js/animacia_about';
 import './src/js/slider';
 import './src/js/slider-rev';
 // import './src/js/slider2';
-import './src/scss/services.scss';
+// import './src/scss/services.scss';
 import './src/js/slider-data.js'
 import './src/js/burger-menu.js'
 
@@ -17,4 +17,9 @@ document.querySelectorAll('.detsls-service').forEach(button => {
     const btnId = event.target.getAttribute('data-btn-id');
       window.location.href = `/services/index.html?id=${btnId}#context`;
   });
+});
+
+document.querySelector('.btn-estimat').addEventListener('click', function() {
+  console.log(1)
+  window.location.href = './estimat/';
 });
