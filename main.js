@@ -23,3 +23,11 @@ document.querySelector('.btn-estimat').addEventListener('click', function() {
   console.log(1)
   window.location.href = './estimat/';
 });
+
+document.querySelectorAll('.link-request').forEach(button => {
+  button.addEventListener('click', (event) => {
+    const btnId = event.target.getAttribute('data-btn-id');
+    // console.log(1)
+      window.location.href = `/estimat/`;
+  });
+});

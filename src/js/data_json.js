@@ -17,27 +17,6 @@ if( id > 0){
 }
 
 
-if (currentPage.endsWith('index.html') || currentPage.endsWith('services.html')) {
-  const swiperWrapper = document.querySelector('.swiper-wrapper');
-  swiperWrapper.textContent = ''
-  jsonServicse.forEach(item => {
-    swiperWrapper.innerHTML += `
-      <div class="swiper-slide">
-        <img class="img-slide" src="/public/services-slider/${item.img1}" alt="${item.img1}">
-        <div class="action-buttons">
-          <button data-btn-id="${item.code}" class="detsls-service">details</button>
-          <button class="link-request">
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.99 4.5L14.99 8.5M14.99 8.5L10.99 13M14.99 8.5H1.98999" stroke="#4A4A49"/>
-            </svg>
-            Request an Estimate
-          </button>
-        </div>
-        <h3>${item.name}</h3>
-      </div>
-    `;
-  });
-}
 
 document.querySelectorAll('.detsls-service').forEach(button => {
   button.addEventListener('click', (event) => {
@@ -60,8 +39,6 @@ document.querySelectorAll('.link-request' , ).forEach(button => {
 });
 
 
-if (currentPage.endsWith('services.html')) {
-  listServicer();
   document.querySelectorAll('.detsls-service').forEach(button => {
     button.addEventListener('click', (event) => {
     itemCode = event.target.getAttribute('data-btn-id');
@@ -83,9 +60,6 @@ listItems.forEach(item => {
 });
 
 
-
-}
-
 function btnLink(params) {
   const btnLing = document.querySelectorAll('.btn-estimat')
   console.log(btnLing)
@@ -103,19 +77,6 @@ btnLink()
 
 
 
-function listServicer  () {
-  let ulList = document.querySelector('.list-name')
-  console.log(1)
-  const listSelect = document.querySelector('.select-list');
-  console.log(1)
-
-  listSelect.textContent = ''
-  ulList.textContent =
-  jsonServicse.forEach(item =>{
-    ulList.innerHTML = `<li value="${item.code}">${item.name}</li>`;
-    listSelect.innerHTML + `<option value="${item.code}">${item.name}</option>`;
-  })
-}
 
 function change (){
   button1.addEventListener('click', () => {

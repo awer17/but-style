@@ -8,7 +8,7 @@ const swiperWrapper = document.querySelector('.swiper-wrapper');
   jsonServicse.forEach(item => {
     swiperWrapper.innerHTML += `
       <div class="swiper-slide">
-        <img class="img-slide" src="services-slider/${item.img1}" alt="${item.img1}">
+        <img class="img-slide" src="/services-slider/${item.img1}" alt="${item.img1}">
         <div class="action-buttons">
           <button data-btn-id="${item.code}" class="detsls-service">details</button>
           <button class="link-request">
@@ -23,9 +23,3 @@ const swiperWrapper = document.querySelector('.swiper-wrapper');
     `;
   });
 
-  document.querySelectorAll('.link-request').forEach(button => {
-    button.addEventListener('click', (event) => {
-      const btnId = event.target.getAttribute('data-btn-id');
-        window.location.href = `./estimat/`;
-    });
-  });
