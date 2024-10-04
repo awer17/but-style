@@ -7,6 +7,8 @@ import "/src/scss/index.scss"
 import "/src/js/slider2";
 import '/src/js/slider-rev';
 import "/src/scss/services.scss"
+import '/src/js/formHandler.js'
+
 
 
 import "/src/js/slider-data_s.js";

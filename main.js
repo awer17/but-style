@@ -8,6 +8,7 @@ import './src/js/slider-rev';
 // import './src/scss/services.scss';
 import './src/js/slider-data.js'
 import './src/js/burger-menu.js'
+import './src/js/formHandler.js'
 
 
 // link to service with key

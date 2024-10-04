@@ -63,7 +63,6 @@ h2{
     font-size: 23px;
   }
 }
-d
 h3{
   color:#4a4a49;
   font-size: 20px;
@@ -82,10 +81,10 @@ p{
     font-size: 20px;
   }
   @include onlylange(640px){
-    font-size: 18px;
+    font-size: 19px;
   }
   @include onlylange(465px){
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
@@ -532,7 +531,7 @@ footer{
           width: 440px;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: 63px 63px 63px;
+          grid-template-rows: 63px 63px 63px 63px;
           @include onlylange(520px){
             width: 100%;
           }
@@ -540,7 +539,7 @@ footer{
             display: block;
             background: #212121;
             border: solid 1px #373737;
-            font-size: 11px;
+            // font-size: 15px;
             padding-left: 17px;
             // padding: 24px 17px;
             color: #A79DA1;
@@ -571,6 +570,23 @@ footer{
             grid-column: 4;
             grid-row: 3;
           }
+          .message{
+            margin: 0;
+            grid-column: 3 / 5;
+            grid-row: 4;
+            margin-top: 30px;
+            margin-left: auto;
+            color: #A79DA1;
+            font-size: 19px;
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: none;
+          }
+          .message.active {
+            display: block;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
           div.time{
             grid-column: 4;
             grid-row: 2;
@@ -624,6 +640,10 @@ footer{
               grid-column: 4;
               grid-row: 3;
             }
+            .message{
+              grid-column: 3 / 5;
+              grid-row: 5;
+            }
           }
           @include onlylange(420px){
             grid-template-rows: repeat(6, 63px) ;
@@ -646,7 +666,10 @@ footer{
               grid-row: 4;
               flex-direction: row;
               padding-left: 17px;
-
+            }
+            .message{
+              grid-column: 3 / 5;
+              grid-row: 7;
             }
 
           }
