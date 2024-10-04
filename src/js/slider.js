@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 var swiper = new Swiper('.mySwiper', {
-  slidesPerView: 2,
+  slidesPerView: 3,
   spaceBetween: 20,
 
   // loop: true,
@@ -30,8 +30,8 @@ var swiper = new Swiper('.mySwiper', {
         slidesPerView: 2,
         spaceBetween: 40,
     },
-    2600:{
-      slidesPerView: 2,
+    1399:{
+      slidesPerView: 3,
       spaceBetween: 40,
     }
   }

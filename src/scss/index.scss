@@ -79,7 +79,6 @@
 .services{
   background: #F0EBE5;
   padding-top: 128px;
-  // padding-bottom: 96px;
   .wrap_conten{
     max-width: 1200px;
     margin: 0 auto;
@@ -95,14 +94,15 @@
     }
   }
   .swiper{
-    max-width: 1440px;
+    width: 1440px;
     height: 512px;
     @include onlylange(1500px){
       width: 90%;
     }
     .swiper-wrapper{
       .swiper-slide{
-        // max-width: 536px;
+        width: 400px;
+        margin-right: 40px;
         img.img-slide{
           width: 100%;
           height: 320px;
