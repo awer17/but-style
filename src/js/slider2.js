@@ -9,7 +9,7 @@ var swiper = new Swiper('.mySwiper2', {
   grid: {
     rows: 2,
   },
-  // spaceBetween: 40,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.swiper-button-prev',
     prevEl: '.swiper-button-next',
@@ -46,9 +46,12 @@ var swiper = new Swiper('.mySwiper2', {
         spaceBetween: 30,
     },
     1275: {
-      spaceBetween: 78,
+      spaceBetween: 30,
     },
-
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   }
 });
 

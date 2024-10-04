@@ -8,7 +8,6 @@ import "/src/js/slider2";
 import '/src/js/slider-rev';
 import "/src/scss/services.scss"
 
-// import '/src/js/data_json.js';
 
 import "/src/js/slider-data_s.js";
 

@@ -27,9 +27,8 @@ var swiper = new Swiper('.mySwiper-reviews', {
         spaceBetween: 40,
     },
     1210: {
-      slidesPerView: 3.4,
-      spaceBetween: 60,
+      slidesPerView: 2.4,
+      spaceBetween: 40,
     },
-    
   }
 });

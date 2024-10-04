@@ -182,15 +182,15 @@ main.services{
             // @include onlylange(1274px){
             //     max-width: 70%;
             //   }
-            height: 725px;
+            height: 735px;
             @include onlylange(819px){
               height: 380px;
             }
             .swiper-wrapper{
-              height: 650px;
+              height: 100%;
               width: 100%;
               .swiper-slide{
-                width: 418px;
+                height: calc(50% - 15px);
               }
             }
             .wrapper-btn{
