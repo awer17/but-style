@@ -516,13 +516,13 @@ footer{
 
         .title{
           font-family: 'Inter Light';
-          font-size: 18px;
+          font-size: 23px;
           color: $color_light;
           margin-bottom: 0;
         }
         .context{
           font-family: 'Inter Light';
-          font-size: 13px;
+          font-size: 18px;
           color: $color_light;
           margin-top: 5px;
         }
@@ -530,8 +530,8 @@ footer{
           margin-top: 64px;
           width: 440px;
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: 63px 63px 63px 63px;
+          grid-template-columns: 1fr 1fr  1fr 150px ;
+          grid-template-rows: 70px 70px 70px 70px;
           @include onlylange(520px){
             width: 100%;
           }
@@ -539,7 +539,7 @@ footer{
             display: block;
             background: #212121;
             border: solid 1px #373737;
-            // font-size: 15px;
+            font-size: 19px;
             padding-left: 17px;
             // padding: 24px 17px;
             color: #A79DA1;
@@ -569,6 +569,7 @@ footer{
           button{
             grid-column: 4;
             grid-row: 3;
+            font-size: 19px;
           }
           .message{
             margin: 0;
@@ -595,81 +596,82 @@ footer{
             flex-direction: column;
             border: solid 1px #373737;
             label{
-              padding-top:11px;
+              padding-top: 9px;
               color: #A79DA1;
               font-size: 11px;
               padding-bottom: 3px;
+              font-size: 19px;
             }
             select{
               // display: block;
               margin: 0 auto;
               color: #A79DA1;
-              font-size: 13px;
+              font-size: 19px;
               border: none;
               // border: solid 1px #373737;
               padding: 3px;
               background: #212121;
             }
           }
+          // @include onlylange(520px){
+          //   grid-template-rows: repeat(4, 63px) ;
+          //   grid-template-columns: repeat(3 , 1fr) 110px;
+          //   input{
+          //     &.name-from{
+          //       grid-column: 1 / 5;
+          //       grid-row: 1;
+          //     }
+          //     &.surname{
+          //       grid-column: 1 /5;
+          //       grid-row: 2;
+          //     }
+          //     &.phone{
+          //       grid-column: 1 / 5;
+          //       grid-row: 3;
+          //     }
+          //     &.email{
+          //       grid-column: 1 / 4;
+          //       grid-row: 4 /5;
+          //     }
+          //   }
+          //   button{
+          //     grid-column: 4;
+          //     grid-row: 4;
+          //   }
+          //   div.time{
+          //     grid-column: 4;
+          //     grid-row: 3;
+          //   }
+          //   .message{
+          //     grid-column: 3 / 5;
+          //     grid-row: 5;
+          //   }
+          // }
           @include onlylange(520px){
-            grid-template-rows: repeat(4, 63px) ;
-            grid-template-columns: repeat(3 , 1fr) 110px;
-            input{
-              &.name-from{
-                grid-column: 1 / 5;
-                grid-row: 1;
-              }
-              &.surname{
-                grid-column: 1 /5;
-                grid-row: 2;
-              }
-              &.phone{
-                grid-column: 1 / 5;
-                grid-row: 3;
-              }
-              &.email{
-                grid-column: 1 / 4;
-                grid-row: 4 /5;
-              }
-            }
-            button{
-              grid-column: 4;
-              grid-row: 4;
-            }
-            div.time{
-              grid-column: 4;
-              grid-row: 3;
-            }
-            .message{
-              grid-column: 3 / 5;
-              grid-row: 5;
-            }
-          }
-          @include onlylange(420px){
             grid-template-rows: repeat(6, 63px) ;
             input{
               &.phone{
                 grid-column: 1 / 5;
-                grid-row: 3;
+                grid-row: 2;
               }
               &.email{
                 grid-column: 1 / 5;
-                grid-row: 5;
+                grid-row: 4;
               }
             }
             button{
               grid-column: 1 / 5;
-              grid-row: 6;
+              grid-row: 5;
             }
             div.time{
               grid-column: 1 / 5;
-              grid-row: 4;
+              grid-row: 3;
               flex-direction: row;
               padding-left: 17px;
             }
             .message{
               grid-column: 3 / 5;
-              grid-row: 7;
+              grid-row: 6;
             }
 
           }
