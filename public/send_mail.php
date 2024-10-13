@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
 
     // Формируем сообщение для отправки
-    $to = "awer100@gmail.com"; // Замените на ваш email
+    $to = "info@but-style.com"; // Замените на ваш email
     $subject = "New Contact Form Submission";
     $message = "
     Name: $name
