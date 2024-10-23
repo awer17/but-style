@@ -4,4 +4,4 @@ import "/src/js/burger-menu.js"
 import "/src/scss/estimat.css"
 import '/src/js/formHandler.js'
 import '/src/js/estimat_form.js'
-
+import '/src/js/photo.js'

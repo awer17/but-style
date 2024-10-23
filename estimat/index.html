@@ -73,36 +73,35 @@
               After you provide us with the details of your order, our manager will calculate the service cost within one business day and will contact you to clarify any details. Please note that the initial estimate will not include hidden defects that may be discovered after the removal of the old flooring. These issues will be discussed with you separately if necessary.
             </p>
             <div class="wrap" id="estimat_form">
+
               <form id="serviceForm">
-                <!-- Имя, фамилия, номер телефона -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="surname">Surname:</label>
-                <input type="text" id="surname" name="surname"><br><br>
-  
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required><br><br>
-  
-                <!-- Выбор времени -->
-                <label for="time">Preferred Time:</label>
-                <select id="time" name="time">
-                    <option value="9am">9 AM</option>
-                    <option value="10am">10 AM</option>
-                    <option value="11am">11 AM</option>
-                    <option value="12pm">12 PM</option>
-                    <option value="1pm">1 PM</option>
-                    <option value="2pm">2 PM</option>
-                    <option value="3pm">3 PM</option>
-                    <option value="4pm">4 PM</option>
-                    <option value="5pm">5 PM</option>
-                    <option value="6pm">6 PM</option>
-                </select><br><br>
-  
+                <div class="block info">
+                  <!-- mane, , surname, phone number -->
+                  <input type="text" id="name" name="name" required placeholder="Nane">
+                  <input type="text" id="surname" name="surname" placeholder="Surname">
+                  <input class="phone" type="tel" id="phone" name="phone" required placeholder="Phone Number">
+                  <!-- time -->
+                  <div class="time">
+                    <label for="time">Preferred Time:</label>
+                    <select id="time" name="time">
+                        <option value="9am">9 AM</option>
+                        <option value="10am">10 AM</option>
+                        <option value="11am">11 AM</option>
+                        <option value="12pm">12 PM</option>
+                        <option value="1pm">1 PM</option>
+                        <option value="2pm">2 PM</option>
+                        <option value="3pm">3 PM</option>
+                        <option value="4pm">4 PM</option>
+                        <option value="5pm">5 PM</option>
+                        <option value="6pm">6 PM</option>
+                    </select>
+                  </div>
+                </div>
+
                 <!-- Первый блок "Сервис" -->
-                <div class="service-block">
-                  <label for="serviceName">Service Name:</label>
+                <div class=" block service-block">
                   <select class="select-list" name="serviceName" required>
-                    <option value="" disabled selected>Выберите сервис</option>
+                    <option value="" disabled selected>Service Name:</option>
                     <option value="11">Engineered Hardwood</option>
                     <option value="12">Laminate</option>
                     <option value="13">Vinyl Laminate</option>
@@ -112,42 +111,53 @@
                     <option value="24">Wall Tiles</option>
                     <option value="25">Kitchen Tile Backsplash</option>
                   </select>
-  
+
                   <!-- Блок для ввода размеров комнаты -->
                   <div class="room-size">
-                    <label for="length">Length (m):</label>
-                    <input type="number" name="length" required placeholder="Length">
-  
-                    <label for="width">Width (m):</label>
-                    <input type="number" name="width" required placeholder="Width">
-  
-                    <label for="height">Ceiling Height (m):</label>
-                    <input type="number" name="height" required placeholder="Height">
+                    <label for="length">Length (ft):</label>
+                    <input class="length"  type="number" name="length" required placeholder="Length">
+
+                    <label for="width">Width (ft):</label>
+                    <input class="width" type="number" name="width" required placeholder="Width">
+
+                    <label  for="height">Height (ft):</label>
+                    <input class="height" type="number" name="height" required placeholder="Height">
                   </div>
-  
+
                   <!-- Блок для загрузки фотографий -->
                   <div class="photo-upload">
                     <label for="photos">Upload Photos (max 5):</label>
-                    <input type="file" name="photos[]" accept="image/*" multiple>
-                    <div class="preview-photos"></div>
+                    <input class="imput_photo active" type="file" name="photos[]" accept="image/*" multiple>
+                    <div class="btn_delete_wrap ">
+                      <div class="btn_delete">Delete photo</div>
+                    </div>
+
+                    <div class="wrap-photo">
+                      <div class="preview-photos">
+                        <!-- <img src="../src/image/but-style.svg" alt="" class="photo">
+                        <img src="../src/image/but-style.svg" alt="" class="photo">
+                        <img src="../src/image/but-style.svg" alt="" class="photo">
+                        <img src="../src/image/but-style.svg" alt="" class="photo">
+                        <img src="../src/image/but-style.svg" alt="" class="photo"> -->
+                      </div>
+                    </div>
                   </div>
-  
+
                   <!-- Поле для ввода текста -->
                   <textarea name="comments" placeholder="Enter additional details"></textarea>
                 </div>
-  
-                <!-- Скрипт для добавления новых блоков "Сервис" с кнопкой удаления -->
+
+
                 <div id="serviceContainer"></div>
-  
-        
+
                 <!-- Кнопка добавления ещё одного блока сервиса -->
-                <button type="button" id="addService">Add Another Service</button><br><br>
-        
+                <!-- <button type="button" id="addService">Add Another Service</button><br><br> -->
+
                 <!-- Кнопка отправки формы -->
-                <button type="submit">Send</button>
+                <button type="submit" class="submit">Send</button>
             </form>
+
             </div>
-  
           </div>
         </section>
 
@@ -193,7 +203,7 @@
                   <option value="5pm">5 PM</option>
                   <option value="6pm">6 PM</option>
                   <option value="7pm">7 PM</option>
-                </select><br><br>
+                </select>
               </div>
                 <input class="email" type="email" id="email" name="email" placeholder="Email:"><br><br>
               <button type="submit">Send</button>
