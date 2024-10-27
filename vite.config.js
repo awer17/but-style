@@ -5,6 +5,9 @@ export default {
   plugins: [
     Inspect()
   ],
+  css: {
+    devSourcemap: true,
+  },
   build: {
     rollupOptions:{
       input: {
@@ -14,7 +17,5 @@ export default {
       }
     }
   },
-  css: {
-    devSourcemap: true,
-  },
+
 }

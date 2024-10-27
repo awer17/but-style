@@ -1,10 +1,4 @@
-// // Найдем форму по ID
 
-// document.addEventListener('touchstart', function (e) {
-//   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-//       e.preventDefault();
-//   }
-// }, { passive: false });
 
 const contactForm = document.getElementById('contactForm');
 
