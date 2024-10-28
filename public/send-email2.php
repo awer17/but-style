@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Формируем тело сообщения
-    $to = "your_email@example.com";
+    $to = "awer100@gmail.com";
     $subject = "New Service Request";
     $message = "Name: $name\nSurname: $surname\nPhone: $phone\nPreferred Time: $time\nService Name: $serviceName\nRoom Size - Length: $length, Width: $width, Height: $height\nComments: $comments\n";
 
