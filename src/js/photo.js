@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function deleteLastPhoto() {
   // Находим блок с фотографиями
   const previewPhotos = document.querySelector('.preview-photos');
-  
   // Находим блок кнопки удаления
   const btnDeleteWrap = document.querySelector('.btn_delete_wrap');
 
@@ -86,10 +85,7 @@ function deleteLastPhoto() {
 }
 
 function deleteListfiles (){
-        console.log('del')
-        console.log(filesArr)
         filesArr.pop()
-        console.log(filesArr)
 }
 
 // Добавляем событие клика на кнопку удаления

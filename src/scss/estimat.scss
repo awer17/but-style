@@ -5,9 +5,25 @@
   }
 }
 
-section.hero{
+section.hero_estmat{
   height: 65vh;
   background-image: url(../gackground_2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 120%; // Устанавливаем начальный размер фона
+  transition: transform .4s ease;
+  // animation: scaleBackground 3s ease-in-out forwards; // Анимация масштаба
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  h1{
+    width: 970px;
+  }
+
 }
 .main .form-warap{
   background: #F0EBE5;
@@ -44,12 +60,13 @@ section.hero{
             background: #F0EBE5;
             border:  solid 1px #1e1e1e;
             grid-column: 1 / 3;
+            border-radius: 0;
+            color: #A79DA1;
             &::placeholder{
               color: #A79DA1;
             }
-            &:focus{
-              // border:  solid 5px #1e1e1e;
-              box-shadow: none;
+            &:focus-visible{
+              outline: 1px solid #2b2a2a;
             }
           }
           .phone{
@@ -173,9 +190,10 @@ section.hero{
           }
           textarea{
             padding-top: 20px;
-            // &::placeholder{
-            //   padding-top: 20px;
-            // }
+            border-radius: 0;
+            &:focus-visible{
+              outline: 1px solid #2b2a2a;
+            }
           }
         }
       }
@@ -186,6 +204,7 @@ section.hero{
         border: solid 1px #1e1e1e;
         width: 150px;
         padding: 5px;
+        color: #2b2a2a;
         cursor: pointer;
         transform: 0.8s;
         margin-left: auto;

@@ -1,5 +1,7 @@
 // Получаем ссылку на форму и кнопку отправки
 const form = document.getElementById('serviceForm');
+const previewPhotos = document.querySelector('.preview-photos');
+
 
 // Обработчик отправки формы
 form.addEventListener('submit', function(event) {
@@ -23,6 +25,8 @@ form.addEventListener('submit', function(event) {
   // Выводим объект с данными в консоль
   console.log('Отправляемые данные:', data);
 
+
+
   // Отправка данных на сервер через Fetch API
   fetch('../send-email2.php', {
     method: 'POST',
@@ -31,9 +35,17 @@ form.addEventListener('submit', function(event) {
     .then(response => response.json())
     .then(result => {
       console.log('Ответ сервера:', result);
-      
-      // Если отправка успешна, очищаем форму
-      form.reset();
+
+      // Перезагружаем страницу
+      setTimeout(() => {
+        window.location.reload(); // Перезагружаем страницу
+      }, 2000);
+      // // Если отправка успешна, очищаем форму
+      // form.reset();
+
+      // previewPhotos.innerHTML = ''; // Удаляем все содержимое внутри preview-photos
+      // // btnDeleteWrap.classList.remove('active');
+      // // filesArr.length = 0;
     })
     .catch(error => {
       console.error('Ошибка отправки данных:', error);
