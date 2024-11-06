@@ -84,7 +84,7 @@
                     <!-- time -->
                     <div class="time">
                       <label for="time">Preferred Time:</label>
-                      <select id="time" name="time">
+                      <select class="select-list" id="time" name="time">
                           <option value="9am">9 AM</option>
                           <option value="10am">10 AM</option>
                           <option value="11am">11 AM</option>
@@ -99,17 +99,19 @@
                     </div>
                   </div>
                   <div class=" block service-block">
-                    <select class="select-list" name="serviceName" required>
-                      <option value="" disabled selected>Service Name:</option>
-                      <option value="11 Engineered Hardwood">Engineered Hardwood</option>
-                      <option value="12 Laminate">Laminate</option>
-                      <option value="13 Vinyl Laminate">Vinyl Laminate</option>
-                      <option value="21 Kitchen Tile">Kitchen Tile</option>
-                      <option value="22 Shower, Bathroom Tile">Shower, Bathroom Tile</option>
-                      <option value="23 Floor Tile">Floor Tile</option>
-                      <option value="24 Wall Tiles">Wall Tiles</option>
-                      <option value="25 Kitchen Tile Backsplash">Kitchen Tile Backsplash</option>
-                    </select>
+                    <div class="wrapper_select-list">
+                      <select class="select-list" name="serviceName" required>
+                        <option value="" disabled selected>Service Name:</option>
+                        <option value="11 Engineered Hardwood">Engineered Hardwood</option>
+                        <option value="12 Laminate">Laminate</option>
+                        <option value="13 Vinyl Laminate">Vinyl Laminate</option>
+                        <option value="21 Kitchen Tile">Kitchen Tile</option>
+                        <option value="22 Shower, Bathroom Tile">Shower, Bathroom Tile</option>
+                        <option value="23 Floor Tile">Floor Tile</option>
+                        <option value="24 Wall Tiles">Wall Tiles</option>
+                        <option value="25 Kitchen Tile Backsplash">Kitchen Tile Backsplash</option>
+                      </select>
+                    </div>
   
                     <!-- Блок для ввода размеров комнаты -->
                     <div class="room-size">
