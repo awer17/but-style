@@ -80,6 +80,8 @@
                     <!-- mane, , surname, phone number -->
                     <input type="text" id="name" name="name" required placeholder="Nane">
                     <input type="text" id="surname" name="surname" placeholder="Surname">
+                    <div class="wrap_time">
+                    </div>
                     <input class="phone" type="tel" id="phone" name="phone" required placeholder="Phone Number">
                     <!-- time -->
                     <div class="time">
@@ -112,19 +114,17 @@
                         <option value="25 Kitchen Tile Backsplash">Kitchen Tile Backsplash</option>
                       </select>
                     </div>
-  
+
                     <!-- Блок для ввода размеров комнаты -->
                     <div class="room-size">
                       <label for="length">Length (ft):</label>
                       <input class="length"  type="number" name="length" required placeholder="Length">
-  
+
                       <label for="width">Width (ft):</label>
                       <input class="width" type="number" name="width" required placeholder="Width">
-  
                       <label  for="height">Height (ft):</label>
                       <input class="height" type="number" name="height" required placeholder="Height">
                     </div>
-  
                     <!-- Блок для загрузки фотографий -->
                     <div class="photo-upload">
                       <label for="photos">Upload Photos (max 5):</label>
@@ -132,13 +132,11 @@
                       <div class="btn_delete_wrap ">
                         <div class="btn_delete">Delete photo</div>
                       </div>
-  
-                      <div class="wrap-photo">
-                        <div class="preview-photos">
-                        </div>
+                    </div>
+                    <div class="wrap-photo">
+                      <div class="preview-photos">
                       </div>
                     </div>
-  
                     <textarea name="comments" placeholder="Enter additional details"></textarea>
                   </div>
                 </div>
