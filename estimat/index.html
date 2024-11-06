@@ -128,7 +128,10 @@
                     <!-- Блок для загрузки фотографий -->
                     <div class="photo-upload">
                       <label for="photos">Upload Photos (max 5):</label>
-                      <input class="imput_photo active" type="file" name="photos[]" accept="image/*" multiple>
+                      <label class="custom-file-upload active">
+                        <input class="input_photo" type="file" name="photos[]" accept="image/*" multiple hidden>
+                        Upload photo
+                      </label>
                       <div class="btn_delete_wrap ">
                         <div class="btn_delete">Delete photo</div>
                       </div>

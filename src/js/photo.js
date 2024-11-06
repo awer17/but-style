@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const photoInput = document.querySelector('input[name="photos[]"]');
   const previewContainer = document.querySelector('.preview-photos');
   let maxPhotos = 5;
-  const fileInputContainer = document.querySelector('.imput_photo');
+  const fileInputContainer = document.querySelector('.custom-file-upload');
   const btnDeletePhoto = document.querySelector('.btn_delete_wrap')
 
   // Контейнер для поля загрузки
@@ -73,7 +73,7 @@ function deleteLastPhoto() {
     }
 
     if(previewPhotos.children.length < 5){
-      const fileInputContainer = document.querySelector('.imput_photo');
+      const fileInputContainer = document.querySelector('.custom-file-upload');
       fileInputContainer.classList.add('active')
       deleteListfiles()
     }

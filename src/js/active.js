@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (){
   selectList.forEach( selectList => {
     selectList.addEventListener('focus', function () {
       if (!selectList.classList.contains('active_select')) {
-        selectList.classList.add('active_select'); // Добавляем класс при фокусе
+        selectList.classList.add('active_select');
       }
     });
   })
