@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (files.length > (maxPhotos - filesArr.length )) {
           alert(`You can upload a maximum of ${maxPhotos} photos.`);
           photoInput.value = '';
-          console.log(filesArr.length + " нет")
+          // console.log(filesArr.length + " нет")
            // Сбросить выбор файлов, если превышен лимит
           return;
       } else {
@@ -93,3 +93,5 @@ const deleteButton = document.querySelector('.btn_delete');
 if (deleteButton) {
   deleteButton.addEventListener('click', deleteLastPhoto);
 }
+
+export default filesArr;

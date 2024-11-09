@@ -60,7 +60,6 @@ const swiperWrapper = document.querySelector('.swiper-wrapper');
 document.querySelectorAll('.detsls-service').forEach(button => {
 
   button.addEventListener('click', (event) => {
-  console.log(event.target.getAttribute('data-btn-id'))
   renderItem(event.target.getAttribute('data-btn-id'))
   });
 })
@@ -70,7 +69,6 @@ function btnLink(params) {
   const btnLing = document.querySelectorAll('.btn-estimat')
   btnLing.forEach (item => {
     item.addEventListener('click', (event) => {
-      console.log(event)
       window.location.href = '../estimat/';
     })
   })

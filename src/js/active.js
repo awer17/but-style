@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function (){
   const  selectList = document.querySelectorAll('.select-list');
-  console.log(selectList)
 
   selectList.forEach( selectList => {
     selectList.addEventListener('focus', function () {

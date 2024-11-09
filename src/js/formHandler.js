@@ -18,7 +18,6 @@ contactForm.addEventListener('submit', function(event) {
   .then(response => response.json())
   .then(data => {
     if (data.success) {
-      // console.log('Email sent:', data.message);
       const messageElement = document.querySelector('.message');
             messageElement.classList.add('active'); // Добавляем класс active
             // Удаляем класс через 5 секунд

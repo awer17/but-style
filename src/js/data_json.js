@@ -10,7 +10,6 @@ const swiperElement = document.querySelector('.swiper');
 const itemDetailsElement = document.querySelector('.item_details');
 let itemCode = "";
 
-console.log('ID:', id);
 
 if( id > 0){
   renderItem(id)
@@ -62,10 +61,8 @@ listItems.forEach(item => {
 
 function btnLink(params) {
   const btnLing = document.querySelectorAll('.btn-estimat')
-  console.log(btnLing)
   btnLing.forEach (item => {
     item.addEventListener('click', (event) => {
-      console.log(event)
       window.location.href = 'estimat.html';
     })
   })
