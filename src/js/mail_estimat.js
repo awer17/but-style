@@ -1,7 +1,7 @@
 // Получаем ссылку на форму и кнопку отправки
 const form = document.getElementById('serviceForm');
 const previewPhotos = document.querySelector('.preview-photos');
-
+const messageElement = document.querySelector('.message');
 
 // Обработчик отправки формы
 form.addEventListener('submit', function(event) {
@@ -35,10 +35,12 @@ form.addEventListener('submit', function(event) {
     .then(response => response.json())
     .then(result => {
       console.log('Ответ сервера:', result);
+      messageElement.classList.add('active');
 
       // Перезагружаем страницу
       setTimeout(() => {
-        window.location.reload(); // Перезагружаем страницу
+        messageElement.classList.remove('active');
+        // window.location.reload(); // Перезагружаем страницу
       }, 2000);
       // // Если отправка успешна, очищаем форму
       // form.reset();
